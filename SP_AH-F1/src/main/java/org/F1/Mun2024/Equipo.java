@@ -31,7 +31,7 @@ public class Equipo {
         this.extra = extra;
     }
 
-    // Definicion Metodo de Impresion
+    // Definicion Metodo de Impresion Lista de Equipos
     public void printEquipos(List<Equipo> equipos){
         System.out.println("**** EQUIPOS ****\n");
         int countEqu = 1;
@@ -41,7 +41,7 @@ public class Equipo {
         }
     }
 
-    // Definicion Metodo de Impresion
+    // Definicion Metodo de Impresion Informacion Equipo
     public void printInfEquipo(Equipo equipo){
         System.out.println("**** Informacion de Equipo ****");
         System.out.println("Nombre de equipo: "+equipo.nameEqu+"\nDirector general: "+equipo.director+"\nPais de origen: "+equipo.paisOrig);
