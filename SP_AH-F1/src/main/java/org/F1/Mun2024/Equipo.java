@@ -12,6 +12,7 @@ public class Equipo {
     String pTwo;
     String extra;
 
+
     public Equipo(){
     }
 
@@ -35,6 +36,7 @@ public class Equipo {
             if (equipo.extra != null) {
                 System.out.println("Piloto Extra: " + equipo.extra);
             }
+            System.out.println();
         }
     }
 }
