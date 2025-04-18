@@ -1,6 +1,7 @@
- package org.F1;
+package org.F1;
 
 import org.F1.Mun2024.Circuito;
+import org.F1.Mun2024.Sprint;
 import org.F1.Mun2024.Equipo;
 import org.F1.Mun2024.Menu;
 import org.F1.Mun2024.Piloto;
@@ -57,7 +58,7 @@ public class Main {
         e7.setPilotos(p23,p25,p24); e8.setPilotos(p19,p18,p20); e9.setPilotos(p13,p12,null);
         e10.setPilotos(p9,p10,p8);
 
-        // Creacion de Circuitos
+        // Creacion de Circuitos & Sprints
         Circuito cr1 = new Circuito(" Circuito Internacional de Baréhin (Sakhir)"," Barein"," 2 de marzo de 2024","5.412 km");
         Circuito cr2 = new Circuito(" Circuito Urbano de Jeddah"," Arabia Saudita"," 9 de marzo de 2024","6.174 km");
         Circuito cr3 = new Circuito(" Circuito de Albert Park (Melbourne)"," Australia"," 24 de marzo de 2024","5.278 km");
@@ -82,6 +83,9 @@ public class Main {
         Circuito cr22 = new Circuito(" Circuito Urbano de Las Vegas"," Las Vegas"," 17 de noviembre de 2024","6.201 km");
         Circuito cr23 = new Circuito(" Circuito Internacional de Losail"," Qatar"," 1 de diciembre de 2024","5.419 km");
         Circuito cr24 = new Circuito(" Circuito Yas Marina"," Abu Dabi"," 8 de diciembre de 2024","5.281 km");
+        Sprint sp1 = new Sprint("Circuito Internacional de Shanghái","China","20 de abril de 2024","5.451 km");
+
+
 
         // Asignar Resultados a Circuito 1
         cr1.Resultados("Max Verstappen",57,"1","1",26); cr1.Resultados("Sergio Perez",57,"2","2",18);
@@ -107,7 +111,7 @@ public class Main {
         cr2.Resultados("Valtteri Bottas",49,"19","17",0); cr2.Resultados("Zhou Guanyu",49,"11","18",0);
         cr2.Resultados("Lance Stroll",5,"10","NC",0); cr2.Resultados("Pierre Gasly",1,"18","NC",0);
 
-        
+
         // Asignar Resultados a Circuito 3
         cr3.Resultados("Carlos Sainz",58,"2","1",25); cr3.Resultados("Charles Leclerc",58,"4","2",19);
         cr3.Resultados("Lando Norris",58,"3","3",15); cr3.Resultados("Oscar Piastri",58,"5","4",12);
@@ -203,7 +207,7 @@ public class Main {
         cr10.Resultados("Daniel Ricciardo",65,"5","15",0); cr10.Resultados("Valtteri Bottas",65,"17","16",0);
         cr10.Resultados("Kevin Magnussen",65,"14","17",0); cr10.Resultados("Alexander Albon",65,"9","18",0);
         cr10.Resultados("Yuki Tsunoda",65,"8","19",0); cr10.Resultados("Logan Sargeant",64,"13","20",0);
-        
+
         // Asignar Resultados a Circuito 11
         cr11.Resultados("George Russell",71,"3","1",25); cr11.Resultados("Oscar Piastri",71,"7","2",18);
         cr11.Resultados("Carlos Sainz",71,"4","3",15); cr11.Resultados("Lewis Hamilton",71,"5","4",12);
@@ -215,7 +219,7 @@ public class Main {
         cr11.Resultados("Alexander Albon",70,"16","15",0); cr11.Resultados("Valtteri Bottas",70,"18","16",0);
         cr11.Resultados("Zhou Guanyu",70,"20","17",0); cr11.Resultados("Fernando Alonso",70,"15","18",0);
         cr11.Resultados("Logan Sargeant",69,"19","19",0); cr11.Resultados("Lando Norris",64,"2","20",0);
-        
+
         // Asignar Resultados a Circuito 12
         cr12.Resultados("Lewis Hamilton",52,"2","1",25); cr12.Resultados("Max Verstappen",52,"4","2",18);
         cr12.Resultados("Lando Norris",52,"3","3",15); cr12.Resultados("Oscar Piastri",52,"5","4",12);
@@ -323,7 +327,7 @@ public class Main {
         cr20.Resultados("Zhou Guanyu",70,"19","15",0); cr20.Resultados("Liam Lawson",70,"12","16",0);
         cr20.Resultados("Sergio Perez",70,"18","17",0); cr20.Resultados("Fernando Alonso",15,"13","NC",0);
         cr20.Resultados("Alexander Albon",0,"9","NC",0); cr20.Resultados("Yuki Tsunoda",0,"11","NC",0);
-        
+
         // Asignar Resultados a Circuito 21
         cr21.Resultados("Max Verstappen",69,"17","1",26); cr21.Resultados("Esteban Ocon",69,"4","2",18);
         cr21.Resultados("Pierre Gasly",69,"13","3",15); cr21.Resultados("George Russell",69,"2","4",12);
@@ -372,13 +376,27 @@ public class Main {
         cr24.Resultados("Liam Lawson",55,"12","17",0); cr24.Resultados("Valtteri Bottas",30,"9","NC",0);
         cr24.Resultados("Franco Colapinto",26,"20","NC",0); cr24.Resultados("Sergio Perez",0,"10","NC",0);
 
-
-
-
-
-
-
-
+        // Asignar Resultados a Sprint 1
+        sp1.Resultados("Red Bull Racing",19,"1","1",8);
+        sp1.Resultados("Mercedes",19,"2","2",7);
+        sp1.Resultados("Red Bull Racing",19,"3","3",6);
+        sp1.Resultados("Ferrari",19,"4","4",5);
+        sp1.Resultados("Ferrari",19,"5","5",4);
+        sp1.Resultados("McLaren",19,"6","6",3);
+        sp1.Resultados("McLaren",19,"7","7",2);
+        sp1.Resultados("Mercedes",19,"8","8",1);
+        sp1.Resultados("Kick Sauber",19,"9","9",0);
+        sp1.Resultados("Haas",19,"10","10",0);
+        sp1.Resultados("RB Honda RBPT",19,"11","11",0);
+        sp1.Resultados("Kick Sauber",19,"12","12",0);
+        sp1.Resultados("Alpine",19,"13","13",0);
+        sp1.Resultados("Aston Martin",19,"14","14",0);
+        sp1.Resultados("Alpine",19,"15","15",0);
+        sp1.Resultados("RB Honda RBPT",19,"16","16",0);
+        sp1.Resultados("Williams",19,"17","17",0);
+        sp1.Resultados("Williams",19,"18","18",0);
+        sp1.Resultados("Haas",19,"19","19",0);
+        sp1.Resultados("Aston Martin",17,"20","20",0);
 
 
         // Creacion Listas equipos | pilotos | circuitos
@@ -403,14 +421,10 @@ public class Main {
         circuitos.add(cr6); circuitos.add(cr7); circuitos.add(cr8); circuitos.add(cr9); circuitos.add(cr10);
         circuitos.add(cr11); circuitos.add(cr12); circuitos.add(cr13); circuitos.add(cr14); circuitos.add(cr15);
         circuitos.add(cr16); circuitos.add(cr17); circuitos.add(cr18); circuitos.add(cr19); circuitos.add(cr20);
-        circuitos.add(cr21); circuitos.add(cr22); circuitos.add(cr23); circuitos.add(cr24);
+        circuitos.add(cr21); circuitos.add(cr22); circuitos.add(cr23); circuitos.add(cr24); circuitos.add(sp1);
 
-
-//        Circuito circSelect = circuitos.get(0);
-//        circSelect.printResultCircuito();
 
         Menu menu = new Menu(equipos,pilotos,circuitos);
         menu.menuPrincipal();
-
     }
 }
