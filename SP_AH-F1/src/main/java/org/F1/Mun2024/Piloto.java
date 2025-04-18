@@ -25,16 +25,21 @@ public class Piloto {
         this.carrerasDispF1 = carrerasDispF1;
         this.puntosAcum2024P = puntosAcum2024P;
     }
-
+    public void printPiloto(List<Piloto> pilotos){
+        System.out.println("**** Pilotos ****\n");
+        int countPil = 1;
+        for (Piloto piloto : pilotos) {
+            System.out.println("["+countPil+"] Piloto: "+piloto.nameP+" Equipo: "+piloto.equipo);
+            countPil++;
+        }
+    }
 
     // Definicion de Metodo de Impresion
-    public void printPilotos(List<Piloto> pilotos) {
+    public void printInfPilotos(Piloto  piloto) {
         System.out.println("**** Informacion de Pilotos ****\n");
-        for (Piloto piloto : pilotos) {
             System.out.println("Nombre y apellido: "+piloto.nameP+"\nEquipo: "+piloto.equipo.nameEqu+"\nEdad: "+piloto.edad);
             System.out.println("Nacionalidad: "+piloto.nacionalidad+"\n# Campeonatos Ganados: "+piloto.campGanadosP);
             System.out.println("# Carreras Disputadas en F1: "+piloto.carrerasDispF1+"\nPuntos Acumulados 2024: "+piloto.puntosAcum2024P);
             System.out.println();
         }
-    }
-}
+ 
