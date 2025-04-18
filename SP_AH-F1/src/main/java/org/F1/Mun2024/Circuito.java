@@ -5,45 +5,56 @@ import java.util.List;
 
 public class Circuito {
     String nameCirc;
-    String fecha;
     String paisCirc;
-    int vueltas;
+    String fecha;
     String longCirc;
     List<String> pilotos = new ArrayList<>();
+    List<Integer> vueltas = new ArrayList<>();
     List<String> posSal = new ArrayList<>();
     List<String> posLleg = new ArrayList<>();
     List<Integer> puntosAdq = new ArrayList<>();
 
-    // Constructores
+    // Definicion de Constructores
     public Circuito(){
     }
 
-    public Circuito(String nameCirc, String fecha, String paisCirc, int vueltas, String longCirc) {
+    public Circuito(String nameCirc, String paisCirc, String fecha, String longCirc) {
         this.nameCirc = nameCirc;
-        this.fecha = fecha;
         this.paisCirc = paisCirc;
-        this.vueltas = vueltas;
+        this.fecha = fecha;
         this.longCirc = longCirc;
     }
 
-    // Definicion Metodo
-    public void agregarResultado(String piloto, String salida, String llegada, int puntos) {
+    // Definicion Metodo Agregar Lista de Resultados
+    public void Resultados(String piloto, int vuelta, String salida, String llegada, int puntos) {
         pilotos.add(piloto);
+        vueltas.add(vuelta);
         posSal.add(salida);
         posLleg.add(llegada);
         puntosAdq.add(puntos);
     }
 
-    // Definicion Metodo de Impresion
-    public void mostrarResultados() {
-        System.out.println("Resultados en " + nameCirc + " (" + fecha + ", " + paisCirc + ")");
-        System.out.println("-------------------------------------------------");
-        for (int i = 0; i < pilotos.size(); i++) {
-            System.out.println("Piloto: " + pilotos.get(i));
-            System.out.println("Posición de salida: " + posSal.get(i));
-            System.out.println("Posición de llegada: " + posLleg.get(i));
-            System.out.println("Puntos adquiridos: " + puntosAdq.get(i));
+    // Definicion Metodo de Impresion Lista Circuitos
+    public void printCircuitos(List<Circuito> circuitos) {
+        System.out.println("**** Informacion de Circuitos ****\n");
+        for (Circuito circuito : circuitos) {
+            System.out.println("Nombre de Circuito: "+circuito.nameCirc+"\nPais: "+circuito.paisCirc);
+            System.out.println("Fecha: "+circuito.fecha+"\nLongitud: "+circuito.longCirc);
             System.out.println();
+        }
+    }
+
+    // Definicion Metodo de Impresion Resultados Circuito 
+    public void printResuCircuito() {
+        System.out.println("*** Informacion de Circuito ****");
+        System.out.println("Nombre de Circuito: "+nameCirc+"\nFecha: "+fecha+"\nPais: "+paisCirc+"\nLongitud: "+longCirc);
+        System.out.println("*** Resultados ****");
+        for (int i = 0; i < pilotos.size(); i++) {
+            System.out.println("Piloto: "+pilotos.get(i));
+            System.out.println("Posición de salida: "+posSal.get(i));
+            System.out.println("Posición de llegada: "+posLleg.get(i));
+            System.out.println("Puntos adquiridos: "+puntosAdq.get(i));
+            System.out.println("_____________________________________");
         }
     }
 }
