@@ -2,6 +2,7 @@ package org.F1;
 
 import org.F1.Mun2024.Circuito;
 import org.F1.Mun2024.Equipo;
+import org.F1.Mun2024.Menu;
 import org.F1.Mun2024.Piloto;
 
 import java.util.ArrayList;
@@ -120,21 +121,11 @@ public class Main {
         circuitos.add(cr21); circuitos.add(cr22); circuitos.add(cr23); circuitos.add(cr24);
 
 
+//        Circuito circSelect = circuitos.get(0);
+//        circSelect.printResultCircuito();
 
-        //Creacion de intancia para llamar el metodo de impresion de Equipos
-        Equipo listaEquipos = new Equipo ();
-        listaEquipos.printEquipos(equipos);
-
-        //Creacion de intancia para llamar el metodo de impresion de Pilotos
-        Piloto listaPilotos = new Piloto ();
-        listaPilotos.printPilotos(pilotos);
-
-        //Creacion de intancia para llamar el metodo de impresion de Circuitos
-        Circuito listaCircuitos = new Circuito ();
-        listaCircuitos.printCircuitos(circuitos);
-
-        Circuito circSelect = circuitos.get(0);
-        circSelect.printResultCircuito();
+        Menu menu = new Menu(equipos,pilotos,circuitos);
+        menu.menuPrincipal();
 
     }
 }
