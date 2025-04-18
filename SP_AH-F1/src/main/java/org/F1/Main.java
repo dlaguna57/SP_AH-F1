@@ -95,6 +95,19 @@ public class Main {
         cr1.Resultados("Esteban Ocon",56,"17","17",0); cr1.Resultados("Pierre Gasly",56,"18","18",0);
         cr1.Resultados("Valtteri Bottas",56,"19","19",0); cr1.Resultados("Logan Sargeant",55,"20","20",0);
 
+        // Asignar Resultados a Circuito 2
+        cr2.Resultados("Max Verstappen",50,"1","1",25); cr2.Resultados("Sergio Perez",50,"2","2",18);
+        cr2.Resultados("Charles Leclerc",50,"4","3",16); cr2.Resultados("Oscar Piastri",50,"8","4",12);
+        cr2.Resultados("Fernando Alonso",50,"9","5",10); cr2.Resultados("George Russell",50,"5","6",8);
+        cr2.Resultados("Oliver Bearman",50,"3","7",6); cr2.Resultados("Lando Norris",50,"6","8",4);
+        cr2.Resultados("Lewis Hamilton",50,"7","9",2); cr2.Resultados("Nico Hulkenberg",50,"16","10",1);
+        cr2.Resultados("Alexander Albon",50,"15","11",0); cr2.Resultados("Kevin Magnussen",50,"12","12",0);
+        cr2.Resultados("Esteban Ocon",49,"17","13",0); cr2.Resultados("Logan Sargeant",49,"20","14",0);
+        cr2.Resultados("Yuki Tsunoda",49,"14","15",0); cr2.Resultados("Daniel Ricciardo",49,"13","16",0);
+        cr2.Resultados("Valtteri Bottas",49,"19","17",0); cr2.Resultados("Zhou Guanyu",49,"11","18",0);
+        cr2.Resultados("Lance Stroll",5,"10","NC",0); cr2.Resultados("Pierre Gasly",1,"18","NC",0);
+
+
 
         // Creacion Listas equipos | pilotos | circuitos
         List<Equipo> equipos = new ArrayList<>();
