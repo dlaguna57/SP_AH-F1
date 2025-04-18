@@ -28,11 +28,18 @@ public class Equipo {
         this.extra = extra
     }
 
-
+    public void printEquipos(){
     System.out.println("**** Informacion de Equipos ****");
         for (Equipo equipo : equipos) {
+            if (equipo.extra != null) {
             System.out.println("Nombre de equipo: "+equipo.nameEqu+"\nDirector general: "+equipo.director+"\nPais de origen: "+equipo.paisOrig);
-            System.out.println("# Campeonatos ganados: "+equipo.campGanadosEqu+"\nPuntos acumlados Mundial 2024: "+equipo.puntosAcumMun2024+"\n");
+            System.out.println("# Campeonatos ganados: "+equipo.campGanadosEqu+"\nPuntos acumlados Mundial 2024: "+equipo.puntosAcumMun2024);
+            System.out.println("Piloto 1: "+equipo.pOne+"\nPiloto 2: "+equipo.pTwo+"\nPiloto Extra: "+equipo.extra);
+            }
+            else
+            System.out.println("Nombre de equipo: "+equipo.nameEqu+"\nDirector general: "+equipo.director+"\nPais de origen: "+equipo.paisOrig);
+            System.out.println("# Campeonatos ganados: "+equipo.campGanadosEqu+"\nPuntos acumlados Mundial 2024: "+equipo.puntosAcumMun2024);
+            System.out.println("Piloto 1: "+equipo.pOne+"\nPiloto 2: "+equipo.pTwo);
         }
-
+    }
 }
