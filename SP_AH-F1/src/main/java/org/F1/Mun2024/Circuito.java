@@ -36,18 +36,18 @@ public class Circuito {
 
     // Definicion Metodo de Impresion Lista Circuitos
     public void printCircuitos(List<Circuito> circuitos) {
-        System.out.println("**** Informacion de Circuitos ****\n");
+        int countCirc = 1;
+        System.out.println("**** Informacion de Circuitos ****");
         for (Circuito circuito : circuitos) {
-            System.out.println("Nombre de Circuito: "+circuito.nameCirc+"\nPais: "+circuito.paisCirc);
-            System.out.println("Fecha: "+circuito.fecha+"\nLongitud: "+circuito.longCirc);
-            System.out.println();
+            System.out.println("["+countCirc+"] Nombre de Circuito: "+circuito.nameCirc+"  Pais: "+circuito.paisCirc);
+            countCirc++;
         }
     }
 
     // Definicion Metodo de Impresion Resultados Circuito
-    public void printResultCircuito() {
+    public void printResultCircuito(Circuito circuito) {
         System.out.println("*** Informacion de Circuito ****");
-        System.out.println("Nombre de Circuito: "+nameCirc+"\nFecha: "+fecha+"\nPais: "+paisCirc+"\nLongitud: "+longCirc);
+        System.out.println("Nombre de Circuito: "+nameCirc+"\nFecha: "+fecha+"\nPais: "+paisCirc+"\nLongitud: "+longCirc+"\n");
         System.out.println("*** Resultados ****");
         for (int i = 0; i < pilotos.size(); i++) {
             System.out.println("Piloto: "+pilotos.get(i));
