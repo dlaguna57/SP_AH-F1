@@ -43,9 +43,7 @@ public class Menu {
                     break;
 
                 case 3:
-                    //Llamada al metodo de impresion de Lista de Circuitos
-                    new Circuito().printCircuitos(circuitos);
-                    break;
+                    menuCircuitos();
 
                 case 4:
                     System.out.println("Saliendo del sistema");
@@ -134,7 +132,7 @@ public class Menu {
         int opcionPi = 0;
         new Piloto().printPiloto(pilotos);
         while (true) {
-            System.out.println("\n===== MENÚ DE Pilotos =====");
+            System.out.println("\n===== MENÚ DE PILOTOS =====");
             System.out.println("[1] Seleccionar un Piloto");
             System.out.println("[2] Volver al Menu Principal");
             System.out.println("[3] Salir");
@@ -167,15 +165,75 @@ public class Menu {
         int pilSelect = sc.nextInt() - 1;
         if (pilSelect >= 0 && pilSelect < pilotos.size()) {
             pilotos.get(pilSelect).printInfPilotos(pilotos.get(pilSelect));
-        } else {
-            System.out.println("Opcion no valida");
-            return;
-
-        }
+        } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
+            System.out.println("\n========== MENÚ DE SELECCION PILOTOS =====");
+            System.out.println("[1] Volver al Menu Anterior");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
+            System.out.print("Seleccione una opción: ");
 
-            System.out.println("\n========== MENÚ DE Pilotos =====");
+            int opcionPiSelec = sc.nextInt();
+            sc.nextLine();
+            switch (opcionPiSelec) {
+                case 1:
+                    menuPilotos();
+                    break;
+                case 2:
+                    menuPrincipal();
+                    return;
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
+        }
+    }
+
+    public void  menuCircuitos() {
+        new Circuito().printCircuitos(circuitos);
+        while (true) {
+            System.out.println("\n===== MENÚ DE CIRCUITOS =====");
+            System.out.println("[1] Seleccionar un Circuito");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
+            System.out.print("Seleccione una opción: ");
+
+            int opcionCirc = sc.nextInt();
+            switch (opcionCirc) {
+                case 1:
+                    menuSelecCirc();
+
+                case 2:
+                    menuPrincipal();
+                    break;
+
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+
+            }
+        }
+    }
+
+    public void menuSelecCirc() {
+        System.out.println("Ingrese el numero del Piloto que desea ver:");
+        int circSelec = sc.nextInt() - 1;
+        if (circSelec >= 0 && circSelec < circuitos.size()) {
+            circuitos.get(circSelec).printResultCircuito(circuitos.get(circSelec));
+        } else {System.out.println("Opcion no valida"); return;}
+
+        while (true) {
+            System.out.println("\n===== MENÚ DE SELECCION CIRCUITOS =====");
             System.out.println("[1] Volver al Menu Anterior");
             System.out.println("[2] Volver al Menu Principal");
             System.out.println("[3] Salir");
