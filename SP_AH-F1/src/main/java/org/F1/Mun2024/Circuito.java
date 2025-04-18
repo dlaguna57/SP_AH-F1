@@ -9,6 +9,7 @@ public class Circuito {
     String fecha;
     String longCirc;
     List<String> pilotos = new ArrayList<>();
+    List<String> equipos = new ArrayList<>();
     List<Integer> vueltas = new ArrayList<>();
     List<String> posSal = new ArrayList<>();
     List<String> posLleg = new ArrayList<>();
@@ -26,8 +27,9 @@ public class Circuito {
     }
 
     // Definicion Metodo Agregar Lista de Resultados
-    public void Resultados(String piloto, int vuelta, String salida, String llegada, int puntos) {
+    public void Resultados(String piloto, String equipo, int vuelta, String salida, String llegada, int puntos) {
         pilotos.add(piloto);
+        equipos.add(equipo);
         vueltas.add(vuelta);
         posSal.add(salida);
         posLleg.add(llegada);
@@ -51,6 +53,7 @@ public class Circuito {
         System.out.println("*** Resultados ****");
         for (int i = 0; i < pilotos.size(); i++) {
             System.out.println("Piloto: "+pilotos.get(i));
+            System.out.println("Equipo: "+equipos.get(i));
             System.out.println("Posición de salida: "+posSal.get(i));
             System.out.println("Posición de llegada: "+posLleg.get(i));
             System.out.println("Puntos adquiridos: "+puntosAdq.get(i));
