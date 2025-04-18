@@ -44,8 +44,8 @@ public class Circuito {
         }
     }
 
-    // Definicion Metodo de Impresion Resultados Circuito 
-    public void printResuCircuito() {
+    // Definicion Metodo de Impresion Resultados Circuito
+    public void printResultCircuito() {
         System.out.println("*** Informacion de Circuito ****");
         System.out.println("Nombre de Circuito: "+nameCirc+"\nFecha: "+fecha+"\nPais: "+paisCirc+"\nLongitud: "+longCirc);
         System.out.println("*** Resultados ****");
