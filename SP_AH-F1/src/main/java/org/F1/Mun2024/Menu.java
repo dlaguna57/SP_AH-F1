@@ -1,10 +1,7 @@
 package org.F1.Mun2024;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.List;
-
-import org.F1.Mun2024.Equipo;
 
 public class Menu {
     int opcion = 0;
@@ -35,7 +32,7 @@ public class Menu {
             int opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
-                    //Llamada al metodo de impresion de Equipos
+                    //Llamada al metodo menuEquipos
                     menuEquipos();
                     break;
 
@@ -50,7 +47,9 @@ public class Menu {
                     break;
 
                 case 4:
-                    return;
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
 
                 default:
                     System.out.println("Opcion no valida, ingrese de nuevo la opcion");
@@ -63,30 +62,26 @@ public class Menu {
     public void menuEquipos(){
         int opcionEq = 0;
         new Equipo().printEquipos(equipos);
-        while (opcionEq != 4) {
+        while (true) {
             System.out.println("\n===== MENÚ DE EQUIPOS =====");
             System.out.println("[1] Seleccionar un Equipo");
-            System.out.println("[2] Volver al Menu Anterior");
-            System.out.println("[3] Volver al Menu Principal");
-            System.out.println("[4] Salir");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
             System.out.print("Seleccione una opción: ");
 
             opcionEq = sc.nextInt();
             switch (opcionEq) {
                 case 1:
-                    menuEquSelec();
-                    break;
+                    menuSelecEqu();
 
                 case 2:
-
+                    menuPrincipal();
                     break;
 
                 case 3:
-
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
                     break;
-
-                case 4:
-                    return;
 
                 default:
                     System.out.println("Opcion no valida, ingrese de nuevo la opcion");
@@ -96,7 +91,7 @@ public class Menu {
         }
     }
 
-    public void menuEquSelec() {
+    public void menuSelecEqu() {
         System.out.println("Ingrese el numero del equipo que desea ver");
         int equSelect = sc.nextInt() - 1;
         if (equSelect >= 0 && equSelect < equipos.size()) {
@@ -114,7 +109,8 @@ public class Menu {
             int opcionEqSelec = sc.nextInt(); sc.nextLine();
             switch (opcionEqSelec){
                 case 1:
-                    return;
+                    menuEquipos();
+                    break;
                 case 2:
                     menuPrincipal();
                     return;
@@ -129,4 +125,3 @@ public class Menu {
         }
     }
 }
-
