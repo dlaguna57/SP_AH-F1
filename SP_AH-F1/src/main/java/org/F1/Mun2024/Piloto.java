@@ -26,6 +26,7 @@ public class Piloto {
         this.puntosAcum2024P = puntosAcum2024P;
     }
 
+
     // Definicion de Metodo de Impresion
     public void printPilotos(List<Piloto> pilotos) {
         System.out.println("**** Informacion de Pilotos ****\n");
