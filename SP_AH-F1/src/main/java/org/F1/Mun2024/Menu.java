@@ -23,6 +23,8 @@ public class Menu {
 
     public void menuPrincipal() {
         while (opcion != 4) {
+            System.out.println(Banner.banner4);
+            System.out.println(Banner.banner2);
             System.out.println("\n===== MENÚ PRINCIPAL =====");
             System.out.println("[1] Mostrar Equipos");
             System.out.println("[2] Mostrar Pilotos");
@@ -62,6 +64,7 @@ public class Menu {
         int opcionEq = 0;
         new Equipo().printEquipos(equipos);
         while (true) {
+            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE EQUIPOS =====");
             System.out.println("[1] Seleccionar un Equipo");
             System.out.println("[2] Volver al Menu Principal");
@@ -102,6 +105,7 @@ public class Menu {
 
 
         while (true) {
+            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE EQUIPO SELECCIONADO =====");
             System.out.println("[1] Volver al Menu Anterior");
             System.out.println("[2] Volver al Menu Principal");
@@ -132,6 +136,7 @@ public class Menu {
         int opcionPi = 0;
         new Piloto().printPiloto(pilotos);
         while (true) {
+            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE PILOTOS =====");
             System.out.println("[1] Seleccionar un Piloto");
             System.out.println("[2] Volver al Menu Principal");
@@ -168,6 +173,7 @@ public class Menu {
         } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
+            System.out.println(Banner.banner4);
             System.out.println("\n========== MENÚ DE SELECCION PILOTOS =====");
             System.out.println("[1] Volver al Menu Anterior");
             System.out.println("[2] Volver al Menu Principal");
@@ -197,6 +203,7 @@ public class Menu {
     public void  menuCircuitos() {
         new Circuito().printCircuitos(circuitos);
         while (true) {
+            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE CIRCUITOS =====");
             System.out.println("[1] Seleccionar un Circuito");
             System.out.println("[2] Volver al Menu Principal");
@@ -233,6 +240,7 @@ public class Menu {
         } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
+            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE SELECCION CIRCUITOS =====");
             System.out.println("[1] Volver al Menu Anterior");
             System.out.println("[2] Volver al Menu Principal");
