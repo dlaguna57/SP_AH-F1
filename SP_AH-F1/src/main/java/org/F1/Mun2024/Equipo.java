@@ -8,6 +8,7 @@ public class Equipo {
     int puntosAcumMun2024;
     Piloto pOne = new Piloto();
     Piloto pTwo = new Piloto();
+    .l.
 
 
     public Equipo(String nameEqu, String director, String paisOrig, int campGanadosEqu, int puntosAcumMun2024, Piloto pOne, Piloto pTwo) {
