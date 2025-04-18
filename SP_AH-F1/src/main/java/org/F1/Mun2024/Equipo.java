@@ -31,8 +31,8 @@ public class Equipo {
 
     System.out.println("**** Informacion de Equipos ****");
         for (Equipo equipo : equipos) {
-            System.out.println("Nombre de equipo: "+equipo.nameEqu+"\nDirector general: "+equipo.director);
-            System.out.println("Vehiculo: "+ruta.vehiculo.modelo+" - "+ruta.vehiculo.placa+"\n");
+            System.out.println("Nombre de equipo: "+equipo.nameEqu+"\nDirector general: "+equipo.director+"\nPais de origen: "+equipo.paisOrig);
+            System.out.println("# Campeonatos ganados: "+equipo.campGanadosEqu+"\nPuntos acumlados Mundial 2024: "+equipo.puntosAcumMun2024+"\n");
         }
 
 }
