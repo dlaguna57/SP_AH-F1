@@ -8,6 +8,7 @@ public class Equipo {
     int puntosAcumMun2024;
     Piloto pOne = new Piloto();
     Piloto pTwo = new Piloto();
+    sdfsdfsdfsdf
     
 
 
