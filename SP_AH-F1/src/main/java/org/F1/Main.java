@@ -1,17 +1,32 @@
 package org.F1;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import org.F1.Mun2024.Circuito;
+import org.F1.Mun2024.Equipo;
+import org.F1.Mun2024.Piloto;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+    public static void main(String[] args) {
+        List<Equipo> equipos = new ArrayList<>();
+        List<Piloto> pilotos = new ArrayList<>();
+        List<Circuito> circuitos = new ArrayList<>();
+
+
+        equipos.add(
+                new Equipo("Red Bull", "Christian Horner", "Austria",
+                        5, 180, "Max Verstappen",
+                        "Sergio Pérez", "Liam Lawson")
+        );
+        
+
+
+
+        Equipo listaEquipos = new Equipo ();
+        listaEquipos.printEquipos(equipos);
+
+
     }
 }
