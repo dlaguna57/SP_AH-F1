@@ -25,7 +25,7 @@ public class Equipo {
         this.puntosAcumMun2024 = puntosAcumMun2024;
         this.pOne = pOne;
         this.pTwo = pTwo;
-        this.extra = extra
+        this.extra = extra;
     }
 
     public void printEquipos(){
