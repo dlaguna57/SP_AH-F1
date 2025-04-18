@@ -33,15 +33,23 @@ public class Equipo {
 
     // Definicion Metodo de Impresion
     public void printEquipos(List<Equipo> equipos){
-        System.out.println("**** Informacion de Equipos ****\n");
+        System.out.println("**** EQUIPOS ****\n");
+        int countEqu = 1;
         for (Equipo equipo : equipos) {
-            System.out.println("Nombre de equipo: "+equipo.nameEqu+"\nDirector general: "+equipo.director+"\nPais de origen: "+equipo.paisOrig);
-            System.out.println("# Campeonatos ganados: "+equipo.campGanadosEqu+"\nPuntos acumlados Mundial 2024: "+equipo.puntosAcumMun2024);
-            System.out.println("Piloto 1: "+equipo.pOne.nameP+"\nPiloto 2: "+equipo.pTwo.nameP);
-            if (equipo.extra != null) {
-                System.out.println("Piloto Extra: " + equipo.extra.nameP);
+            System.out.println("["+countEqu+"] "+equipo.nameEqu);
+            countEqu++;
+        }
+    }
+
+    // Definicion Metodo de Impresion
+    public void printInfEquipo(Equipo equipo){
+        System.out.println("**** Informacion de Equipo ****");
+        System.out.println("Nombre de equipo: "+equipo.nameEqu+"\nDirector general: "+equipo.director+"\nPais de origen: "+equipo.paisOrig);
+        System.out.println("# Campeonatos ganados: "+equipo.campGanadosEqu+"\nPuntos acumlados Mundial 2024: "+equipo.puntosAcumMun2024);
+        System.out.println("Piloto 1: "+equipo.pOne.nameP+"\nPiloto 2: "+equipo.pTwo.nameP);
+        if (equipo.extra != null) {
+            System.out.println("Piloto Extra: " + equipo.extra.nameP);
             }
             System.out.println();
-        }
     }
 }
