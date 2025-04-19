@@ -64,7 +64,6 @@ public class Menu {
         int opcionEq = 0;
         new Equipo().printEquipos(equipos);
         while (true) {
-            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE EQUIPOS =====");
             System.out.println("[1] Seleccionar un Equipo");
             System.out.println("[2] Volver al Menu Principal");
@@ -105,7 +104,6 @@ public class Menu {
 
 
         while (true) {
-            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE EQUIPO SELECCIONADO =====");
             System.out.println("[1] Volver al Menu Anterior");
             System.out.println("[2] Volver al Menu Principal");
@@ -136,7 +134,6 @@ public class Menu {
         int opcionPi = 0;
         new Piloto().printPiloto(pilotos);
         while (true) {
-            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE PILOTOS =====");
             System.out.println("[1] Seleccionar un Piloto");
             System.out.println("[2] Volver al Menu Principal");
@@ -173,7 +170,6 @@ public class Menu {
         } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
-            System.out.println(Banner.banner4);
             System.out.println("\n========== MENÚ DE SELECCION PILOTOS =====");
             System.out.println("[1] Volver al Menu Anterior");
             System.out.println("[2] Volver al Menu Principal");
@@ -203,23 +199,27 @@ public class Menu {
     public void  menuCircuitos() {
         new Circuito().printCircuitos(circuitos);
         while (true) {
-            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE CIRCUITOS =====");
             System.out.println("[1] Seleccionar un Circuito");
-            System.out.println("[2] Volver al Menu Principal");
-            System.out.println("[3] Salir");
+            System.out.println("[2] Posiciones de equipos y pilotos por circuito ");
+            System.out.println("[3] Volver al Menu Principal");
+            System.out.println("[4] Salir");
             System.out.print("Seleccione una opción: ");
 
             int opcionCirc = sc.nextInt();
             switch (opcionCirc) {
                 case 1:
                     menuSelecCirc();
-
+                    break;
                 case 2:
-                    menuPrincipal();
+                    posxcarr();
                     break;
 
                 case 3:
+                    menuPrincipal();
+                    break;
+
+                case 4:
                     System.out.println("Saliendo del sistema");
                     System.exit(0);
                     break;
@@ -240,7 +240,6 @@ public class Menu {
         } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
-            System.out.println(Banner.banner4);
             System.out.println("\n===== MENÚ DE SELECCION CIRCUITOS =====");
             System.out.println("[1] Volver al Menu Anterior");
             System.out.println("[2] Volver al Menu Principal");
@@ -263,6 +262,25 @@ public class Menu {
                 default:
                     System.out.println("Opcion no valida, ingrese de nuevo la opcion");
                     break;
+            }
+        }
+    }
+    public void posxcarr() {
+        for (Circuito circuito : circuitos) {
+            System.out.println("Resultados de la carrera en " + circuito.nameCirc + " - " + circuito.paisCirc);
+
+            // Imprimir posiciones de los pilotos
+            System.out.println("Posiciones de equipos y Pilotos:");
+            for (int i = 0; i < circuito.equipos.size(); i++) {
+                String equipo = circuito.equipos.get(i);
+                String salida = circuito.posSal.get(i);
+                String llegada = circuito.posLleg.get(i);
+                int puntos = circuito.puntosAdq.get(i);
+                System.out.println( " - Circutio: " + circuito.nameCirc + " - Pais: " + circuito.paisCirc);
+                System.out.println( " - Equipo: " + equipo);
+                System.out.println(" - Piloto: " + circuito.pilotos.get(i) + " Posición de salida: " + salida + " - Posición de llegada: " + llegada);
+                System.out.println(" - Puntos obtenidos: " + puntos);
+                System.out.println("----------------------------");
             }
         }
     }
