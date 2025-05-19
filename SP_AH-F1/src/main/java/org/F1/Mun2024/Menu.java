@@ -23,8 +23,8 @@ public class Menu {
 
     public void menuPrincipal() {
         while (opcion != 4) {
-            System.out.println(Banner.banner4);
-            System.out.println(Banner.banner2);
+            System.out.println(Banner.getBanner4());
+            System.out.println(Banner.getBanner2());
             System.out.println("\n===== MENÚ PRINCIPAL =====");
             System.out.println("[1] Mostrar Equipos");
             System.out.println("[2] Mostrar Pilotos");
@@ -55,7 +55,6 @@ public class Menu {
                 default:
                     System.out.println("Opcion no valida, ingrese de nuevo la opcion");
                     break;
-
             }
         }
     }
@@ -87,7 +86,6 @@ public class Menu {
                 default:
                     System.out.println("Opcion no valida, ingrese de nuevo la opcion");
                     break;
-
             }
         }
     }
@@ -157,7 +155,6 @@ public class Menu {
                 default:
                     System.out.println("Opcion no valida, ingrese de nuevo la opcion");
                     break;
-
             }
         }
     }
@@ -233,7 +230,7 @@ public class Menu {
     }
 
     public void menuSelecCirc() {
-        System.out.println("Ingrese el numero del Piloto que desea ver:");
+        System.out.println("Ingrese el numero del Circuito que desea ver:");
         int circSelec = sc.nextInt() - 1;
         if (circSelec >= 0 && circSelec < circuitos.size()) {
             circuitos.get(circSelec).printResultCircuito(circuitos.get(circSelec));
@@ -267,18 +264,18 @@ public class Menu {
     }
     public void posxcarr() {
         for (Circuito circuito : circuitos) {
-            System.out.println("Resultados de la carrera en " + circuito.nameCirc + " - " + circuito.paisCirc);
+            System.out.println("Resultados de la carrera en " + circuito.getNameCirc() + " - " + circuito.getPaisCirc());
 
             // Imprimir posiciones de los pilotos
             System.out.println("Posiciones de equipos y Pilotos:");
-            for (int i = 0; i < circuito.equipos.size(); i++) {
-                String equipo = circuito.equipos.get(i);
-                String salida = circuito.posSal.get(i);
-                String llegada = circuito.posLleg.get(i);
-                int puntos = circuito.puntosAdq.get(i);
-                System.out.println( " - Circutio: " + circuito.nameCirc + " - Pais: " + circuito.paisCirc);
+            for (int i = 0; i < circuito.getEquipos().size(); i++) {
+                String equipo = circuito.getEquipos().get(i);
+                String salida = circuito.getPosSal().get(i);
+                String llegada = circuito.getPosLleg().get(i);
+                int puntos = circuito.getPuntosAdq().get(i);
+                System.out.println( " - Circutio: " + circuito.getNameCirc() + " - Pais: " + circuito.getPaisCirc());
                 System.out.println( " - Equipo: " + equipo);
-                System.out.println(" - Piloto: " + circuito.pilotos.get(i) + " Posición de salida: " + salida + " - Posición de llegada: " + llegada);
+                System.out.println(" - Piloto: " + circuito.getPilotos().get(i) + " Posición de salida: " + salida + " - Posición de llegada: " + llegada);
                 System.out.println(" - Puntos obtenidos: " + puntos);
                 System.out.println("----------------------------");
             }
