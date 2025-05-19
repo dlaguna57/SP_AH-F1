@@ -4,20 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Circuito {
-    String nameCirc;
-    String paisCirc;
-    String fecha;
-    String longCirc;
-    List<String> pilotos = new ArrayList<>();
-    List<String> equipos = new ArrayList<>();
-    List<String> vueltas = new ArrayList<>();
-    List<String> posSal = new ArrayList<>();
-    List<String> posLleg = new ArrayList<>();
-    List<Integer> puntosAdq = new ArrayList<>();
+    private String nameCirc;
+    private String paisCirc;
+    private String fecha;
+    private String longCirc;
+    private List<String> pilotos = new ArrayList<>();
+    private List<String> equipos = new ArrayList<>();
+    private List<String> vueltas = new ArrayList<>();
+    private List<String> posSal = new ArrayList<>();
+    private List<String> posLleg = new ArrayList<>();
+    private List<Integer> puntosAdq = new ArrayList<>();
 
     // Definicion de Constructores
-    public Circuito(){
-    }
+    public Circuito(){   }
 
     public Circuito(String nameCirc, String paisCirc, String fecha, String longCirc) {
         this.nameCirc = nameCirc;
@@ -25,6 +24,24 @@ public class Circuito {
         this.fecha = fecha;
         this.longCirc = longCirc;
     }
+
+    // Definicion de metodos Get
+    public String getNameCirc() {return nameCirc;}
+    public String getPaisCirc() {return paisCirc;}
+    public String getFecha() {return fecha;}
+    public String getLongCirc() {return longCirc;}
+    public List<String> getPilotos() {return pilotos;}
+    public List<String> getEquipos() {return equipos;}
+    public List<String> getVueltas() {return vueltas;}
+    public List<String> getPosSal() {return posSal;}
+    public List<String> getPosLleg() {return posLleg;}
+    public List<Integer> getPuntosAdq() {return puntosAdq;}
+
+    // Definicion de metodos Set
+    public void setNameCirc(String nameCirc) {this.nameCirc = nameCirc;}
+    public void setPaisCirc(String paisCirc) {this.paisCirc = paisCirc;}
+    public void setFecha(String fecha) {this.fecha = fecha;}
+    public void setLongCirc(String longCirc) {this.longCirc = longCirc;}
 
     // Definicion Metodo Agregar Lista de Resultados
     public void Resultados(String piloto, String equipo, String vuelta, String salida, String llegada, int puntos) {
@@ -41,7 +58,7 @@ public class Circuito {
         int countCirc = 1;
         System.out.println("**** Informacion de Circuitos ****");
         for (Circuito circuito : circuitos) {
-            System.out.println("["+countCirc+"] Nombre de Circuito: "+circuito.nameCirc+"  Pais: "+circuito.paisCirc);
+            System.out.println("["+countCirc+"] Nombre de Circuito: "+circuito.getNameCirc()+"  Pais: "+circuito.getPaisCirc());
             countCirc++;
         }
     }
