@@ -256,7 +256,7 @@ public class Menu {
             sc.nextLine();
             switch (opcionPiSelec) {
                 case 1:
-                    menuPilotos();
+                    menuCircuitos();
                     break;
                 case 2:
                     menuPrincipal();
