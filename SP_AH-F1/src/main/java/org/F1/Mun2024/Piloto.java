@@ -52,12 +52,21 @@ public class Piloto {
         }
     }
 
-    // Definicion de Metodo de Impresion
+    // Definicion de Metodo de Impresion en Tabla
     public void printInfPilotos(Piloto piloto) {
-        System.out.println("**** Informacion de Pilotos ****\n");
-        System.out.println("Nombre y apellido: " + piloto.getNameP() + "\nEquipo: " + piloto.getEquipo().getNameEqu() + "\nEdad: " + piloto.getEdad());
-        System.out.println("Nacionalidad: " + piloto.getNacionalidad() + "\n# Campeonatos Ganados: " + piloto.getCampGanadosP());
-        System.out.println("# Carreras Disputadas en F1: " + piloto.getCarrerasDispF1() + "\nPuntos Acumulados 2024: " + piloto.getPuntosAcum2024P());
-        System.out.println();
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ %-20s ▐ %-15s ▐ %-5s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %-9s ▐ %n",
+                "Nombre", "Equipo", "Edad", "Nacionalidad", "Campeonatos", "Carreras", "Puntos 2024");
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+
+        System.out.printf("▐ ♦ %-20s  ▐ %-15s ▐ %-5d ▐ %-15s ▐ %-10d ▐ %-10d ▐ %-10d▐ %n",
+                    piloto.getNameP(),
+                    piloto.getEquipo().getNameEqu(),
+                    piloto.getEdad(),
+                    piloto.getNacionalidad(),
+                    piloto.getCampGanadosP(),
+                    piloto.getCarrerasDispF1(),
+                    piloto.getPuntosAcum2024P());
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
     }
 }
