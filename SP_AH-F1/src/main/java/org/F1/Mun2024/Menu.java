@@ -7,9 +7,9 @@ public class Menu {
     int opcion = 0;
     Scanner sc = new Scanner(System.in);
     //Llamado de lista de Clase Main
-    List<Equipo> equipos;
-    List<Piloto> pilotos;
-    List<Circuito> circuitos;
+    private List<Equipo> equipos;
+    private List<Piloto> pilotos;
+    private List<Circuito> circuitos;
 
     //Definicion de Constructores
     public Menu() {
@@ -19,6 +19,15 @@ public class Menu {
         this.equipos = equipos;
         this.pilotos = pilotos;
         this.circuitos = circuitos;
+    }
+    //metodos Get
+    public List<Equipo> getEquipos() { return equipos;}
+    public List<Piloto> getPilotos() {return pilotos;}
+    public List<Circuito> getCircuitos() {return circuitos;}
+    // metodos Set
+    public void setEquipos(List<Equipo> equipos) {this.equipos = equipos;}
+    public void setPilotos(List<Piloto> pilotos) {this.pilotos = pilotos;}
+    public void setCircuitos(List<Circuito> circuitos) {this.circuitos = circuitos;
     }
 
     public void menuPrincipal() {
