@@ -14,48 +14,49 @@ public class Main {
     public static void main(String[] args) {
 
         //Creacion de Equipos
-        Equipo e1 = new Equipo("Red Bull Racing","Christian Horner","Austria",7,589);
-        Equipo e2 = new Equipo("Mercedes","Toto Wolff","Alemania",16,468);
-        Equipo e3 = new Equipo("Ferrari","Frédéric Vasseur","Italia",24,658);
-        Equipo e4 = new Equipo("McLaren","Andrea Stella","Reino Unido",12,666);
+        Equipo e1 = new Equipo("Red Bull Racing","Christian Horner","Austria",6,589);
+        Equipo e2 = new Equipo("Mercedes","Toto Wolff","Alemania",8,468);
+        Equipo e3 = new Equipo("Ferrari","Frédéric Vasseur","Italia",16,658);
+        Equipo e4 = new Equipo("McLaren","Andrea Stella","Reino Unido",9,666);
         Equipo e5 = new Equipo("Aston Martin","Mike Krack","Reino Unido",0,94);
-        Equipo e6 = new Equipo("Alpine","Bruno Famin","Francia",0,65);
-        Equipo e7 = new Equipo("Williams","James Vowles","Reino Unido",16,17);
+        Equipo e6 = new Equipo("Alpine","Bruno Famin","Francia",2,65);
+        Equipo e7 = new Equipo("Williams","James Vowles","Reino Unido",9,17);
         Equipo e8 = new Equipo("RB Honda RBPT","Laurent Mekies","Italia",0,46);
         Equipo e9 = new Equipo("Kick Sauber","Alessandro Alunni Bravi","Suiza",0,4);
         Equipo e10 = new Equipo("Haas","Ayao Komatsu","Estados Unidos",0,58);
 
         //Creacion de Pilotos con Asignacion de su respectivo Equipo
-        Piloto p1 = new Piloto("Pierre Gasly",e6,29,"Francia",4,136,42);
-        Piloto p2 = new Piloto("Esteban Ocon",e6,28,"Francia",3,133,23);
-        Piloto p3 = new Piloto("Jack Doohan",e6,22,"Australia",2,0,0);
-        Piloto p4 = new Piloto("Fernando Alonso",e5,43,"España",13,381,70);
-        Piloto p5 = new Piloto("Lance Stroll",e5,26,"Canada",1,148,24);
-        Piloto p6 = new Piloto("Charles Leclerc",e3,27,"Monaco",5,128,356);
-        Piloto p7 = new Piloto("Carlos Sainz",e3,30,"España",2,188,290);
-        Piloto p8 = new Piloto("Oliver Bearman",e3,20,"Reino Unido",1,2,6);
-        Piloto p9 = new Piloto("Nico Hulkenberg",e10,37,"Alemania",3,206,41);
-        Piloto p10 = new Piloto("Kevin Magnussen",e10,32,"Dinamarca",2,163,16);
-        Piloto p11 = new Piloto("Oliver Bearman",e10,20,"Reino Unido",1,2,7);
-        Piloto p12 = new Piloto("Zhou Guanyu",e9,26,"China",1,52,4);
-        Piloto p13 = new Piloto("Valtteri Bottas",e9,35,"Finlandia",4,226,0);
-        Piloto p14 = new Piloto("Lando Norris",e4,25,"Reino Unido",5,110,374);
-        Piloto p15 = new Piloto("Oscar Piastri",e4,24,"Australia",6,38,292);
-        Piloto p16 = new Piloto("George Russell",e2,27,"Reino Unido",3,110,245);
-        Piloto p17 = new Piloto("Lewis Hamilton",e2,40,"Reino Unido",15,340,223);
-        Piloto p18 = new Piloto("Yuki Tsunoda",e8,25,"Japon",1,72,30);
-        Piloto p19 = new Piloto("Daniel Ricciardo",e8,35,"Australia",3,244,12);
-        Piloto p20 = new Piloto("Liam Lawson",e8,23,"Nueva Zelanda",3,5,4);
-        Piloto p21 = new Piloto("Max Verstappen",e1,27,"Paises Bajos",9,192,437);
-        Piloto p22 = new Piloto("Sergio Perez",e1,35,"Mexico",3,266,152);
-        Piloto p23 = new Piloto("Alexander Albon",e7,29,"Tailandia",2,82,12);
-        Piloto p24 = new Piloto("Franco Colapinto",e7,22,"Argentina",2,5,5);
-        Piloto p25 = new Piloto("Logan Sargeant",e7,24,"Estados Unidos",1,28,0);
+        Piloto p1 = new Piloto("Pierre Gasly",e6,29,"Francia",0,159,42);
+        Piloto p2 = new Piloto("Esteban Ocon",e6,28,"Francia",0,162,23);
+        Piloto p3 = new Piloto("Jack Doohan",e6,22,"Australia",0,7,0);
+        Piloto p4 = new Piloto("Fernando Alonso",e5,43,"España",2,409,70);
+        Piloto p5 = new Piloto("Lance Stroll",e5,26,"Canada",0,172,24);
+        Piloto p6 = new Piloto("Charles Leclerc",e3,27,"Monaco",0,152,356);
+        Piloto p7 = new Piloto("Carlos Sainz",e3,30,"España",0,212,290);
+        Piloto p8 = new Piloto("Oliver Bearman",e3,20,"Reino Unido",0,9,6);
+        Piloto p9 = new Piloto("Nico Hulkenberg",e10,37,"Alemania",0,233,41);
+        Piloto p10 = new Piloto("Kevin Magnussen",e10,32,"Dinamarca",0,185,16);
+        Piloto p11 = new Piloto("Oliver Bearman",e10,20,"Reino Unido",0,9,7);
+        Piloto p12 = new Piloto("Zhou Guanyu",e9,26,"China",0,68,4);
+        Piloto p13 = new Piloto("Valtteri Bottas",e9,35,"Finlandia",0,246,0);
+        Piloto p14 = new Piloto("Lando Norris",e4,25,"Reino Unido",0,134,374);
+        Piloto p15 = new Piloto("Oscar Piastri",e4,24,"Australia",0,52,292);
+        Piloto p16 = new Piloto("George Russell",e2,27,"Reino Unido",0,134,245);
+        Piloto p17 = new Piloto("Lewis Hamilton",e2,40,"Reino Unido",7,362,223);
+        Piloto p18 = new Piloto("Yuki Tsunoda",e8,25,"Japon",0,93,30);
+        Piloto p19 = new Piloto("Daniel Ricciardo",e8,35,"Australia",0,257,12);
+        Piloto p20 = new Piloto("Liam Lawson",e8,23,"Nueva Zelanda",0,17,4);
+        Piloto p21 = new Piloto("Max Verstappen",e1,27,"Paises Bajos",4,215,437);
+        Piloto p22 = new Piloto("Sergio Perez",e1,35,"Mexico",0,281,152);
+        Piloto p23 = new Piloto("Alexander Albon",e7,29,"Tailandia",0,110,12);
+        Piloto p24 = new Piloto("Franco Colapinto",e7,22,"Argentina",0,9,5);
+        Piloto p25 = new Piloto("Logan Sargeant",e7,24,"Estados Unidos",0,36,0);
+
 
         // Asignacion de Pilotos a cada Equipo
-        e1.setPilotos(p21,p22,null); e2.setPilotos(p17,p16,null); e3.setPilotos(p6,p7,p8);
-        e4.setPilotos(p14,p15,null); e5.setPilotos(p4,p5,null); e6.setPilotos(p1,p2,p3);
-        e7.setPilotos(p23,p25,p24); e8.setPilotos(p19,p18,p20); e9.setPilotos(p13,p12,null);
+        e1.setPilotos(p21,p22,null);e2.setPilotos(p17,p16,null);e3.setPilotos(p6,p7,p8);
+        e4.setPilotos(p14,p15,null);e5.setPilotos(p4,p5,null);e6.setPilotos(p1,p2,p3);
+        e7.setPilotos(p23,p25,p24); e8.setPilotos(p19,p18,p20);e9.setPilotos(p13,p12,null);
         e10.setPilotos(p9,p10,p8);
 
         // Creacion de Circuitos & Sprints
@@ -64,7 +65,7 @@ public class Main {
         Circuito cr3 = new Circuito(" Circuito de Albert Park (Melbourne)"," Australia"," 24 de marzo de 2024","5.278 km");
         Circuito cr4 = new Circuito(" Circuito de Suzuka"," Japon"," 7 de abril de 2024","5.807 km");
         Circuito cr5 = new Circuito("Circuito Internacional de Shanghái","China","21 de abril de 2024","5.451 km");
-        Circuito cr6 = new Circuito(" Circuito Urbano de Miami (EE.UU.)"," Miami","5 de mayo de 2024","5.412 km");
+        Circuito cr6 = new Circuito(" Circuito Urbano de Miami (EE.UU.)"," Estados Unidos","5 de mayo de 2024","5.412 km");
         Circuito cr7 = new Circuito("Autódromo Enzo e Dino Ferrari (Imola)","Emilia-Romagna","19 de mayo de 2024","4.909 km");
         Circuito cr8 = new Circuito(" Circuito de Mónaco (Montecarlo)"," Monaco"," 26 de mayo de 2024","3.337 km");
         Circuito cr9 = new Circuito(" Circuito Gilles Villeneuve (Montreal)"," Canada"," 9 de junio de 2024","4.361 km");
@@ -83,55 +84,60 @@ public class Main {
         Circuito cr22 = new Circuito(" Circuito Urbano de Las Vegas"," Las Vegas"," 17 de noviembre de 2024","6.201 km");
         Circuito cr23 = new Circuito(" Circuito Internacional de Losail"," Qatar"," 1 de diciembre de 2024","5.419 km");
         Circuito cr24 = new Circuito(" Circuito Yas Marina"," Abu Dabi"," 8 de diciembre de 2024","5.281 km");
-        Sprint sp1 = new Sprint("(Sprint) - Circuito Internacional de Shanghái","China","20 de abril de 2024","5.451 km");
+        Sprint sp1 = new Sprint("Circuito Internacional de Shanghái","China","20 de abril de 2024","5.451 km");
+        Sprint sp2 = new Sprint(" Circuito Urbano de Miami (EE.UU.)"," Estados Unidos","4 de mayo de 2024","5.412 km");
+        Sprint sp3 = new Sprint(" Red Bull Ring (Spielberg)"," Austria"," 29 de junio de 2024","4.318 km");
+        Sprint sp4 = new Sprint(" Circuito de las Américas (Austin)"," Estados Unidos"," 19 de octubre de 2024","5.513 km");
+        Sprint sp5 = new Sprint(" Autódromo de Interlagos (São Paulo)"," Brasil"," 2 de noviembre de 2024","4.309 km");
+        Sprint sp6 = new Sprint(" Circuito Internacional de Losail"," Qatar"," 30 de noviembre de 2024","5.419 km");
 
         // Asignar Resultados a Circuito 1
-        cr1.Resultados("Max Verstappen","Red Bull Racing","57","1","1",26); cr1.Resultados("Sergio Perez","Red Bull Racing","57","2","2",18);
-        cr1.Resultados("Carlos Sainz","Ferrari","57","3","3",15); cr1.Resultados("Charles Leclerc","Ferrari","57","4","4",12);
-        cr1.Resultados("George Russell","Mercedes","57","5","5",10); cr1.Resultados("Lando Norris","McLaren ","57","6","6",8);
-        cr1.Resultados("Lewis Hamilton","Mercedes","57","7","7",6); cr1.Resultados("Oscar Piastri","McLaren ","57","8","8",4);
-        cr1.Resultados("Fernando Alonso","Aston Martin ","57","9","9",2); cr1.Resultados("Lance Stroll","Aston Martin ","57","10","10",1);
-        cr1.Resultados("Zhou Guanyu","Kick Sauber ","56","11","11",0); cr1.Resultados("Kevin Magnussen","Haas ","56","12","12",0);
-        cr1.Resultados("Daniel Ricciardo","RB Honda RBPT","56","13","13",0); cr1.Resultados("Yuki Tsunoda","RB Honda RBPT","56","14","14",0);
-        cr1.Resultados("Alexander Albon","Williams ","56","15","15",0); cr1.Resultados("Nico Hulkenberg","Haas ","56","16","16",0);
-        cr1.Resultados("Esteban Ocon","Alpine ","56","17","17",0); cr1.Resultados("Pierre Gasly","Alpine ","56","18","18",0);
-        cr1.Resultados("Valtteri Bottas","Kick Sauber ","56","19","19",0); cr1.Resultados("Logan Sargeant","Williams ","55","20","20",0);
+        cr1.Resultados("Max Verstappen","Red Bull Racing","57","1","1",26);cr1.Resultados("Sergio Perez","Red Bull Racing","57","2","2",18);
+        cr1.Resultados("Carlos Sainz","Ferrari","57","3","3",15);cr1.Resultados("Charles Leclerc","Ferrari","57","4","4",12);
+        cr1.Resultados("George Russell","Mercedes","57","5","5",10);cr1.Resultados("Lando Norris","McLaren ","57","6","6",8);
+        cr1.Resultados("Lewis Hamilton","Mercedes","57","7","7",6);cr1.Resultados("Oscar Piastri","McLaren ","57","8","8",4);
+        cr1.Resultados("Fernando Alonso","Aston Martin ","57","9","9",2);cr1.Resultados("Lance Stroll","Aston Martin ","57","10","10",1);
+        cr1.Resultados("Zhou Guanyu","Kick Sauber ","56","11","11",0);cr1.Resultados("Kevin Magnussen","Haas ","56","12","12",0);
+        cr1.Resultados("Daniel Ricciardo","RB Honda RBPT","56","13","13",0);cr1.Resultados("Yuki Tsunoda","RB Honda RBPT","56","14","14",0);
+        cr1.Resultados("Alexander Albon","Williams ","56","15","15",0);cr1.Resultados("Nico Hulkenberg","Haas ","56","16","16",0);
+        cr1.Resultados("Esteban Ocon","Alpine ","56","17","17",0);cr1.Resultados("Pierre Gasly","Alpine ","56","18","18",0);
+        cr1.Resultados("Valtteri Bottas","Kick Sauber ","56","19","19",0);cr1.Resultados("Logan Sargeant","Williams ","55","20","20",0);
 
         // Asignar Resultados a Circuito 2
-        cr2.Resultados("Max Verstappen","Red Bull Racing","50","1","1",25); cr2.Resultados("Sergio Perez","Red Bull Racing","50","2","2",18);
-        cr2.Resultados("Charles Leclerc","Ferrari","50","4","3",16); cr2.Resultados("Oscar Piastri","McLaren","50","8","4",12);
-        cr2.Resultados("Fernando Alonso","Aston Martin","50","9","5",10); cr2.Resultados("George Russell","Mercedes","50","5","6",8);
-        cr2.Resultados("Oliver Bearman","Ferrari","50","3","7",6); cr2.Resultados("Lando Norris","McLaren","50","6","8",4);
-        cr2.Resultados("Lewis Hamilton","Mercedes","50","7","9",2); cr2.Resultados("Nico Hulkenberg","Haas","50","16","10",1);
-        cr2.Resultados("Alexander Albon","Williams","50","15","11",0); cr2.Resultados("Kevin Magnussen","Haas","50","12","12",0);
-        cr2.Resultados("Esteban Ocon","Alpine","49","17","13",0); cr2.Resultados("Logan Sargeant","Williams","49","20","14",0);
-        cr2.Resultados("Yuki Tsunoda","RB Honda RBPT","49","14","15",0); cr2.Resultados("Daniel Ricciardo","RB Honda RBPT","49","13","16",0);
-        cr2.Resultados("Valtteri Bottas","Kick Sauber","49","19","17",0); cr2.Resultados("Zhou Guanyu","Kick Sauber","49","11","18",0);
-        cr2.Resultados("Lance Stroll","Aston Martin","5","10","NC",0); cr2.Resultados("Pierre Gasly","Alpine","1","18","NC",0);
+        cr2.Resultados("Max Verstappen","Red Bull Racing","50","1","1",25);cr2.Resultados("Sergio Perez","Red Bull Racing","50","2","2",18);
+        cr2.Resultados("Charles Leclerc","Ferrari","50","4","3",16);cr2.Resultados("Oscar Piastri","McLaren","50","8","4",12);
+        cr2.Resultados("Fernando Alonso","Aston Martin","50","9","5",10);cr2.Resultados("George Russell","Mercedes","50","5","6",8);
+        cr2.Resultados("Oliver Bearman","Ferrari","50","3","7",6);cr2.Resultados("Lando Norris","McLaren","50","6","8",4);
+        cr2.Resultados("Lewis Hamilton","Mercedes","50","7","9",2);cr2.Resultados("Nico Hulkenberg","Haas","50","16","10",1);
+        cr2.Resultados("Alexander Albon","Williams","50","15","11",0);cr2.Resultados("Kevin Magnussen","Haas","50","12","12",0);
+        cr2.Resultados("Esteban Ocon","Alpine","49","17","13",0);cr2.Resultados("Logan Sargeant","Williams","49","20","14",0);
+        cr2.Resultados("Yuki Tsunoda","RB Honda RBPT","49","14","15",0);cr2.Resultados("Daniel Ricciardo","RB Honda RBPT","49","13","16",0);
+        cr2.Resultados("Valtteri Bottas","Kick Sauber","49","19","17",0);cr2.Resultados("Zhou Guanyu","Kick Sauber","49","11","18",0);
+        cr2.Resultados("Lance Stroll","Aston Martin","5","10","NC",0);cr2.Resultados("Pierre Gasly","Alpine","1","18","NC",0);
 
         // Asignar Resultados a Circuito 3
-        cr3.Resultados("Carlos Sainz","Ferrari","58","2","1",25); cr3.Resultados("Charles Leclerc","Ferrari","58","4","2",19);
-        cr3.Resultados("Lando Norris","McLaren","58","3","3",15); cr3.Resultados("Oscar Piastri","McLaren","58","5","4",12);
-        cr3.Resultados("Sergio Perez","Red Bull Racing","58","6","5",10); cr3.Resultados("Lance Stroll","Aston Martin","58","9","6",8);
-        cr3.Resultados("Yuki Tsunoda","RB Honda RBPT","58","8","7",6); cr3.Resultados("Fernando Alonso","Aston Martin","58","10","8",4);
-        cr3.Resultados("Nico Hulkenberg","Haas","58","16","9",2); cr3.Resultados("Kevin Magnussen","Haas","57","14","10",1);
-        cr3.Resultados("Alexander Albon","Williams","57","12","11",0); cr3.Resultados("Daniel Ricciardo","RB Honda RBPT","57","18","12",0);
-        cr3.Resultados("Pierre Gasly","Alpine","57","17","13",0); cr3.Resultados("Valtteri Bottas","Kick Sauber","57","13","14",0);
-        cr3.Resultados("Zhou Guanyu","Kick Sauber","57","19","15",0); cr3.Resultados("Esteban Ocon","Alpine","57","15","16",0);
-        cr3.Resultados("George Russell","Mercedes","56","7","17",0); cr3.Resultados("Lewis Hamilton","Mercedes","15","11","NC",0);
+        cr3.Resultados("Carlos Sainz","Ferrari","58","2","1",25);cr3.Resultados("Charles Leclerc","Ferrari","58","4","2",19);
+        cr3.Resultados("Lando Norris","McLaren","58","3","3",15);cr3.Resultados("Oscar Piastri","McLaren","58","5","4",12);
+        cr3.Resultados("Sergio Perez","Red Bull Racing","58","6","5",10);cr3.Resultados("Lance Stroll","Aston Martin","58","9","6",8);
+        cr3.Resultados("Yuki Tsunoda","RB Honda RBPT","58","8","7",6);cr3.Resultados("Fernando Alonso","Aston Martin","58","10","8",4);
+        cr3.Resultados("Nico Hulkenberg","Haas","58","16","9",2);cr3.Resultados("Kevin Magnussen","Haas","57","14","10",1);
+        cr3.Resultados("Alexander Albon","Williams","57","12","11",0);cr3.Resultados("Daniel Ricciardo","RB Honda RBPT","57","18","12",0);
+        cr3.Resultados("Pierre Gasly","Alpine","57","17","13",0);cr3.Resultados("Valtteri Bottas","Kick Sauber","57","13","14",0);
+        cr3.Resultados("Zhou Guanyu","Kick Sauber","57","19","15",0);cr3.Resultados("Esteban Ocon","Alpine","57","15","16",0);
+        cr3.Resultados("George Russell","Mercedes","56","7","17",0);cr3.Resultados("Lewis Hamilton","Mercedes","15","11","NC",0);
         cr3.Resultados("Max Verstappen","Red Bull Racing","3","1","NC",0);
 
         // Asignar Resultados a Circuito 4
-        cr4.Resultados("Max Verstappen","Red Bull Racing","53","1","1",26); cr4.Resultados("Sergio Perez","Red Bull Racing","53","2","2",18);
-        cr4.Resultados("Carlos Sainz","Ferrari","53","4","3",15); cr4.Resultados("Charles Leclerc","Ferrari","53","8","4",12);
-        cr4.Resultados("Lando Norris","McLaren","53","3","5",10); cr4.Resultados("Fernando Alonso","Aston Martin","53","5","6",8);
-        cr4.Resultados("George Russell","Mercedes","53","9","7",6); cr4.Resultados("Oscar Piastri","McLaren","53","6","8",4);
-        cr4.Resultados("Lewis Hamilton","Mercedes","53","7","9",2); cr4.Resultados("Yuki Tsunoda","RB Honda RBPT","52","10","10",1);
-        cr4.Resultados("Nico Hulkenberg","Haas","52","12","11",0); cr4.Resultados("Lance Stroll","Aston Martin","52","16","12",0);
-        cr4.Resultados("Kevin Magnussen","Haas","52","18","13",0); cr4.Resultados("Valtteri Bottas","Kick Sauber","52","13","14",0);
-        cr4.Resultados("Esteban Ocon","Alpine","52","15","15",0); cr4.Resultados("Pierre Gasly","Alpine","52","17","16",0);
-        cr4.Resultados("Logan Sargeant","Williams","52","19","17",0); cr4.Resultados("Zhou Guanyu","Kick Sauber","12","20","NC",0);
-        cr4.Resultados("Daniel Ricciardo","RB Honda RBPT","0","11","NC",0); cr4.Resultados("Alexander Albon","Williams","0","14","NC",0);
+        cr4.Resultados("Max Verstappen","Red Bull Racing","53","1","1",26);cr4.Resultados("Sergio Perez","Red Bull Racing","53","2","2",18);
+        cr4.Resultados("Carlos Sainz","Ferrari","53","4","3",15);cr4.Resultados("Charles Leclerc","Ferrari","53","8","4",12);
+        cr4.Resultados("Lando Norris","McLaren","53","3","5",10);cr4.Resultados("Fernando Alonso","Aston Martin","53","5","6",8);
+        cr4.Resultados("George Russell","Mercedes","53","9","7",6);cr4.Resultados("Oscar Piastri","McLaren","53","6","8",4);
+        cr4.Resultados("Lewis Hamilton","Mercedes","53","7","9",2);cr4.Resultados("Yuki Tsunoda","RB Honda RBPT","52","10","10",1);
+        cr4.Resultados("Nico Hulkenberg","Haas","52","12","11",0);cr4.Resultados("Lance Stroll","Aston Martin","52","16","12",0);
+        cr4.Resultados("Kevin Magnussen","Haas","52","18","13",0);cr4.Resultados("Valtteri Bottas","Kick Sauber","52","13","14",0);
+        cr4.Resultados("Esteban Ocon","Alpine","52","15","15",0);cr4.Resultados("Pierre Gasly","Alpine","52","17","16",0);
+        cr4.Resultados("Logan Sargeant","Williams","52","19","17",0);cr4.Resultados("Zhou Guanyu","Kick Sauber","12","20","NC",0);
+        cr4.Resultados("Daniel Ricciardo","RB Honda RBPT","0","11","NC",0);cr4.Resultados("Alexander Albon","Williams","0","14","NC",0);
 
         // Asignar Resultados a Circuito 5
         cr5.Resultados("Max Verstappen","Red Bull Racing","56","1","1",25); cr5.Resultados("Lando Norris","McLaren","56","4","2",18);
@@ -375,16 +381,76 @@ public class Main {
         cr24.Resultados("Franco Colapinto","Williams","26","20","NC",0); cr24.Resultados("Sergio Perez","Red Bull Racing","0","10","NC",0);
 
         // Asignar Resultados a Sprint 1
-        sp1.Resultados("Max Verstappen","Red Bull Racing","19","1","1",8);  sp1.Resultados("Lewis Hamilton","Mercedes","19","2","2",7);
-        sp1.Resultados("Sergio Perez","Red Bull Racing","19","3","3",6); sp1.Resultados("Charles Leclerc","Ferrari","19","4","4",5);
-        sp1.Resultados("Carlos Sainz","Ferrari","19","5","5",4); sp1.Resultados("Lando Norris","McLaren","19","6","6",3);
-        sp1.Resultados("Oscar Piastri","McLaren","19","7","7",2); sp1.Resultados("George Russell","Mercedes","19","8","8",1);
-        sp1.Resultados("Zhou Guanyu","Kick Sauber","19","9","9",0); sp1.Resultados("Kevin Magnussen","Haas","19","10","10",0);
-        sp1.Resultados("Daniel Ricciardo","RB Honda RBPT","19","11","11",0); sp1.Resultados("Valtteri Bottas","Kick Sauber","19","12","12",0);
-        sp1.Resultados("Esteban Ocon","Alpine","19","13","13",0); sp1.Resultados("Lance Stroll","Aston Martin","19","14","14",0);
-        sp1.Resultados("Pierre Gasly","Alpine","19","15","15",0); sp1.Resultados("Yuki Tsunoda","RB Honda RBPT","19","16","16",0);
-        sp1.Resultados("Alexander Albon","Williams","19","17","17",0); sp1.Resultados("Logan Sargeant","Williams","19","18","18",0);
-        sp1.Resultados("Nico Hulkenberg","Haas","19","19","19",0); sp1.Resultados("Fernando Alonso","Aston Martin","17","20","20",0);
+        sp1.Resultados("Max Verstappen","Red Bull Racing","19","4","1",8); sp1.Resultados("Lewis Hamilton","Mercedes","19","2","2",7);
+        sp1.Resultados("Sergio Perez","Red Bull Racing","19","6","3",6);sp1.Resultados("Charles Leclerc","Ferrari","19","7","4",5);
+        sp1.Resultados("Carlos Sainz","Ferrari","19","5","5",4);sp1.Resultados("Lando Norris","McLaren","19","1","6",3);
+        sp1.Resultados("Oscar Piastri","McLaren","19","8","7",2);sp1.Resultados("George Russell","Mercedes","19","11","8",1);
+        sp1.Resultados("Zhou Guanyu","Kick Sauber","19","10","9",0);sp1.Resultados("Kevin Magnussen","Haas","19","12","10",0);
+        sp1.Resultados("Daniel Ricciardo","RB Honda RBPT","19","14","11",0);sp1.Resultados("Valtteri Bottas","Kick Sauber","19","9","12",0);
+        sp1.Resultados("Esteban Ocon","Alpine","19","17","13",0);sp1.Resultados("Lance Stroll","Aston Martin","19","15","14",0);
+        sp1.Resultados("Pierre Gasly","Alpine","19","16","15",0);sp1.Resultados("Yuki Tsunoda","RB Honda RBPT","19","19","16",0);
+        sp1.Resultados("Alexander Albon","Williams","19","18","17",0);sp1.Resultados("Logan Sargeant","Williams","19","20","18",0);
+        sp1.Resultados("Nico Hulkenberg","Haas","19","13","19",0);sp1.Resultados("Fernando Alonso","Aston Martin","17","3","20",0);
+
+        // Asignar Resultados a Sprint 2
+        sp2.Resultados("Max Verstappen","Red Bull Racing","19","1","1",8);sp2.Resultados("Charles Leclerc","Ferrari","19","2","2",7);
+        sp2.Resultados("Sergio Perez","Red Bull Racing","19","3","3",6);sp2.Resultados("Daniel Ricciardo","RB Honda RBPT","19","4","4",5);
+        sp2.Resultados("Carlos Sainz","Ferrari","19","5","5",4);sp2.Resultados("Oscar Piastri","McLaren","19","6","6",3);
+        sp2.Resultados("Nico Hulkenberg","Haas","19","10","7",2);sp2.Resultados("Yuki Tsunoda","RB Honda RBPT","19","15","8",1);
+        sp2.Resultados("Pierre Gasly","Alpine","19","16","9",0);sp2.Resultados("Logan Sargeant","Williams","19","18","10",0);
+        sp2.Resultados("Zhou Guanyu","Kick Sauber","19","17","11",0);sp2.Resultados("George Russell","Mercedes","19","11","12",0);
+        sp2.Resultados("Alexander Albon","Williams","19","20","13",0);sp2.Resultados("Valtteri Bottas","Kick Sauber","19","19","14",0);
+        sp2.Resultados("Esteban Ocon","Alpine","19","13","15",0);sp2.Resultados("Lewis Hamilton","Mercedes","19","12","16",0);
+        sp2.Resultados("Fernando Alonso","Aston Martin","19","8","17",0);sp2.Resultados("Kevin Magnussen","Haas","19","14","18",0);
+        sp2.Resultados("Lance Stroll","Aston Martin","1","7","NC",0);sp2.Resultados("Lando Norris","McLaren","0","9","NC",0);
+
+        // Asignar Resultados a Sprint 3
+        sp3.Resultados("Max Verstappen","Red Bull ","23","1","1",8);sp3.Resultados("Oscar Piastri","McLaren","23","3","2",7);
+        sp3.Resultados("Lando Norris","McLaren","23","2","3",6);sp3.Resultados("George Russell","Mercedes","23","4","4",5);
+        sp3.Resultados("Carlos Sainz","Ferrari","23","5","5",4);sp3.Resultados("Lewis Hamilton","Mercedes","23","6","6",3);
+        sp3.Resultados("Charles Leclerc","Ferrari","23","10","7",2);sp3.Resultados("Sergio Perez","Red Bull","23","7","8",1);
+        sp3.Resultados("Kevin Magnussen","Haas","23","11","9",0);sp3.Resultados("Lance Stroll","Aston Martin","23","12","10",0);
+        sp3.Resultados("Esteban Ocon","Alpine","23","8","11",0);sp3.Resultados("Pierre Gasly","Alpine","23","9","12",0);
+        sp3.Resultados("Yuki Tsunoda","RB Honda RBPT","23","14","13",0);sp3.Resultados("Daniel Ricciardo","RB Honda RBPT","23","16","14",0);
+        sp3.Resultados("Fernando Alonso","Aston Martin","23","13","15",0);sp3.Resultados("Logan Sargeant","Williams","23","15","16",0);
+        sp3.Resultados("Alexander Albon","Williams","23","20","17",0);sp3.Resultados("Valtteri Bottas","Kick Sauber","23","18","18",0);
+        sp3.Resultados("Nico Hulkenberg","Haas","23","17","19",0);sp3.Resultados("Zhou Guanyu","Kick Sauber","23","19","20",0);
+
+        // Asignar Resultados a Sprint 4
+        sp4.Resultados("Max Verstappen","Red Bull","19","1","1",8);sp4.Resultados("Carlos Sainz","Ferrari","19","5","2",7);
+        sp4.Resultados("Lando Norris","McLaren","19","4","3",6);sp4.Resultados("Charles Leclerc","Ferrari","19","3","4",5);
+        sp4.Resultados("George Russell","Mercedes","19","2","5",4);sp4.Resultados("Lewis Hamilton","Mercedes","19","7","6",3);
+        sp4.Resultados("Kevin Magnussen","Haas","19","8","7",2);sp4.Resultados("Nico Hulkenberg","Haas","19","6","8",1);
+        sp4.Resultados("Sergio Perez","Red Bull","19","11","9",0);sp4.Resultados("Oscar Piastri","McLaren","19","16","10",0);
+        sp4.Resultados("Yuki Tsunoda","RB Honda RBPT","19","9","11",0);sp4.Resultados("Franco Colapinto","Williams","19","10","12",0);
+        sp4.Resultados("Lance Stroll","Aston Martin","19","13","13",0);sp4.Resultados("Pierre Gasly","Alpine","19","12","14",0);
+        sp4.Resultados("Esteban Ocon","Alpine","19","17","15",0);sp4.Resultados("Liam Lawson","RB Honda RBPT","19","15","16",0);
+        sp4.Resultados("Alexander Albon","Williams","19","20","17",0);sp4.Resultados("Fernando Alonso","Aston Martin","19","14","18",0);
+        sp4.Resultados("Zhou Guanyu","Kick Sauber","19","19","19",0);sp4.Resultados("Valtteri Bottas","Kick Sauber","19","18","20",0);
+
+        // Asignar Resultados a Sprint 5
+        sp5.Resultados("Lando Norris","McLaren","24","2","1",8);sp5.Resultados("Oscar Piastri","McLaren","24","1","2",7);
+        sp5.Resultados("Charles Leclerc","Ferrari","24","3","3",6);sp5.Resultados("Max Verstappen","Red Bull","24","4","4",5);
+        sp5.Resultados("Carlos Sainz","Ferrari","24","5","5",4);sp5.Resultados("George Russell","Mercedes","24","6","6",3);
+        sp5.Resultados("Pierre Gasly","Alpine","24","7","7",2);sp5.Resultados("Sergio Perez","Red Bull","24","13","8",1);
+        sp5.Resultados("Liam Lawson","RB Honda RBPT","24","8","9",0);sp5.Resultados("Alexander Albon","Williams","24","9","10",0);
+        sp5.Resultados("Lewis Hamilton","Mercedes","24","11","11",0);sp5.Resultados("Franco Colapinto","Williams","24","14","12",0);
+        sp5.Resultados("Esteban Ocon","Alpine","24","16","13",0);sp5.Resultados("Oliver Bearman","Haas","24","10","14",0);
+        sp5.Resultados("Yuki Tsunoda","RB Honda RBPT","24","17","15",0);sp5.Resultados("Valtteri Bottas","Kick Sauber","24","15","16",0);
+        sp5.Resultados("Zhou Guanyu","Kick Sauber","24","20","17",0);sp5.Resultados("Fernando Alonso","Aston Martin","24","18","18",0);
+        sp5.Resultados("Lance Stroll","Aston Martin","24","19","19",0);sp5.Resultados("Nico Hulkenberg","Haas","19","12","NC",0);
+
+        // Asignar Resultados a Sprint 6
+        sp6.Resultados("Oscar Piastri","McLaren","19","3","1",8);sp6.Resultados("Lando Norris","McLaren","19","1","2",7);
+        sp6.Resultados("George Russell","Mercedes","19","2","3",6);sp6.Resultados("Carlos Sainz","Ferrari","19","4","4",5);
+        sp6.Resultados("Charles Leclerc","Ferrari","19","5","5",4);sp6.Resultados("Lewis Hamilton","Mercedes","19","7","6",3);
+        sp6.Resultados("Nico Hulkenberg","Haas","19","9","7",2);sp6.Resultados("Max Verstappen","Red Bull","19","6","8",1);
+        sp6.Resultados("Pierre Gasly","Alpine","19","8","9",0);sp6.Resultados("Kevin Magnussen","Haas","19","15","10",0);
+        sp6.Resultados("Fernando Alonso","Aston Martin","19","11","11",0);sp6.Resultados("Valtteri Bottas","Kick Sauber","19","13","12",0);
+        sp6.Resultados("Lance Stroll","Aston Martin","19","14","13",0);sp6.Resultados("Esteban Ocon","Alpine","19","17","14",0);
+        sp6.Resultados("Alexander Albon","Williams","19","12","15",0);sp6.Resultados("Liam Lawson","RB Honda RBPT","19","10","16",0);
+        sp6.Resultados("Yuki Tsunoda","RB Honda RBPT","19","16","17",0);sp6.Resultados("Franco Colapinto","Williams","19","20","18",0);
+        sp6.Resultados("Zhou Guanyu","Kick Sauber","19","18","19",0);sp6.Resultados("Sergio Perez","Red Bull","19","19","20",0);
 
         // Creacion Listas equipos | pilotos | circuitos
         List<Equipo> equipos = new ArrayList<>();
@@ -403,12 +469,13 @@ public class Main {
         pilotos.add(p21); pilotos.add(p22); pilotos.add(p23); pilotos.add(p24); pilotos.add(p25);
 
         //Agregar los Circuitos a la lista
-        circuitos.add(cr1); circuitos.add(cr2); circuitos.add(cr3); circuitos.add(cr4); circuitos.add(cr5);
-        circuitos.add(cr6); circuitos.add(cr7); circuitos.add(cr8); circuitos.add(cr9); circuitos.add(cr10);
-        circuitos.add(cr11); circuitos.add(cr12); circuitos.add(cr13); circuitos.add(cr14); circuitos.add(cr15);
-        circuitos.add(cr16); circuitos.add(cr17); circuitos.add(cr18); circuitos.add(cr19); circuitos.add(cr20);
-        circuitos.add(cr21); circuitos.add(cr22); circuitos.add(cr23); circuitos.add(cr24); circuitos.add(sp1);
-
+        circuitos.add(cr1);circuitos.add(cr2);circuitos.add(cr3);circuitos.add(cr4);circuitos.add(cr5);
+        circuitos.add(cr6);circuitos.add(cr7);circuitos.add(cr8);circuitos.add(cr9);circuitos.add(cr10);
+        circuitos.add(cr11);circuitos.add(cr12);circuitos.add(cr13);circuitos.add(cr14);circuitos.add(cr15);
+        circuitos.add(cr16);circuitos.add(cr17);circuitos.add(cr18);circuitos.add(cr19);circuitos.add(cr20);
+        circuitos.add(cr21);circuitos.add(cr22);circuitos.add(cr23);circuitos.add(cr24);circuitos.add(sp1);
+        circuitos.add(sp2);circuitos.add(sp3);circuitos.add(sp4);circuitos.add(sp5);circuitos.add(sp6);
+        
         Menu menu = new Menu(equipos,pilotos,circuitos);
         menu.menuPrincipal();
     }
