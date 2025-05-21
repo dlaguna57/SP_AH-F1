@@ -63,18 +63,25 @@ public class Circuito {
         }
     }
 
-    // Definicion Metodo de Impresion Resultados Circuito
+    // Definicion Metodo de Impresion Resultados Circuito en Tabla
     public void printResultCircuito(Circuito circuito) {
-        System.out.println("*** Informacion de Circuito ****");
-        System.out.println("Nombre de Circuito: "+nameCirc+"\nFecha: "+fecha+"\nPais: "+paisCirc+"\nLongitud: "+longCirc+"\n");
-        System.out.println("*** Resultados ****");
-        for (int i = 0; i < pilotos.size(); i++) {
-            System.out.println("Piloto: "+pilotos.get(i));
-            System.out.println("Equipo: "+equipos.get(i));
-            System.out.println("Posición de salida: "+posSal.get(i));
-            System.out.println("Posición de llegada: "+posLleg.get(i));
-            System.out.println("Puntos adquiridos: "+puntosAdq.get(i));
-            System.out.println("_____________________________________");
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ %-35s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %n",
+                "Circuito", "Fecha", "Pais", "Longitud");
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ ♦ %-20s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %n",
+                circuito.getNameCirc(), circuito.getFecha(), circuito.getPaisCirc(), circuito.getLongCirc());
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ %-20s   ▐ %-15s ▐ %-10s ▐ %-10s ▐ %-10s ▐ %-10s ▐ %n",
+                "Piloto", "Equipo", "Salida", "Llegada", "Puntos", "Vueltas");
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+
+        for (int i = 0; i < circuito.getPilotos().size(); i++) {
+            System.out.printf("▐ ♦ %-20s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %-10d ▐ %-10s ▐ %n",
+                    circuito.getPilotos().get(i), circuito.getEquipos().get(i),
+                    circuito.getPosSal().get(i), circuito.getPosLleg().get(i),
+                    circuito.getPuntosAdq().get(i), circuito.getVueltas().get(i));
         }
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
     }
 }
