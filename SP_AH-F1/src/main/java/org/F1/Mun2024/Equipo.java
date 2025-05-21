@@ -64,7 +64,7 @@ public class Equipo {
     public void printInfEquipo(Equipo equipo) {
         System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
         System.out.printf("▐ %-18s ▐ %-20s ▐ %-15s ▐ %-10s ▐ %n",
-                "Equipo", "Director", "País de Origen", "Campeonatos");
+                "Equipo", "Director", "País de Origen", "Camp. Wins");
         System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
         System.out.printf("▐ ♦ %-18s ▐ %-20s ▐ %-15s ▐ %-10d ▐ %n",
                 equipo.getNameEqu(), equipo.getDirector(), equipo.getPaisOrig(), equipo.getCampGanadosEqu());
