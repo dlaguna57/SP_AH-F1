@@ -65,7 +65,7 @@ public class Piloto {
     public void printInfPilotos(Piloto piloto) {
         System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
         System.out.printf("▐ %-20s ▐ %-15s ▐ %-5s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %-9s ▐ %n",
-                "Nombre", "Equipo", "Edad", "Nacionalidad", "Campeonatos", "Carreras", "Puntos 2024");
+                "Nombre", "Equipo", "Edad", "Nacionalidad", "Camp. Wins", "Carreras", "Puntos 2024");
         System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
         System.out.printf("▐ ♦ %-20s  ▐ %-15s ▐ %-5d ▐ %-15s ▐ %-10d ▐ %-10d ▐ %-10d▐ %n",
                 piloto.getNameP(), piloto.getEquipo().getNameEqu(), piloto.getEdad(),
