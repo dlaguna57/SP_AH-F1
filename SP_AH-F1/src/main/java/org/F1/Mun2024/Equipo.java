@@ -62,12 +62,23 @@ public class Equipo {
 
     // Definicion Metodo de Impresion Informacion Equipo
     public void printInfEquipo(Equipo equipo) {
-        System.out.println("**** Informacion de Equipo ****");
-        System.out.println("Nombre de equipo: " + equipo.getNameEqu() + "\nDirector general: " + equipo.getDirector() + "\nPais de origen: " + equipo.getPaisOrig());
-        System.out.println("# Campeonatos ganados: " + equipo.getCampGanadosEqu() + "\nPuntos acumlados Mundial 2024: " + equipo.getPuntosAcumMun2024());
-        System.out.println("Piloto 1: " + equipo.getPOne().getNameP() + "\nPiloto 2: " + equipo.getPTwo().getNameP());
-        if (equipo.extra != null) {
-            System.out.println("Piloto Extra: " + equipo.getExtra().getNameP());
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ %-18s ▐ %-20s ▐ %-15s ▐ %-10s ▐ %n",
+                "Equipo", "Director", "País de Origen", "Campeonatos");
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ ♦ %-18s ▐ %-20s ▐ %-15s ▐ %-10d ▐ %n",
+                equipo.getNameEqu(), equipo.getDirector(), equipo.getPaisOrig(), equipo.getCampGanadosEqu());
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ %-20s ▐ %-15s ▐ %-15s ▐ %n", "Piloto", "Equipo", "Puntos 2024");
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ ♦ %-20s ▐ %-15s ▐ %-15d ▐ %n",
+                equipo.getPOne().getNameP(), equipo.getNameEqu(), equipo.getPOne().getPuntosAcum2024P());
+        System.out.printf("▐ ♦ %-20s ▐ %-15s ▐ %-15d ▐ %n",
+                equipo.getPTwo().getNameP(), equipo.getNameEqu(), equipo.getPTwo().getPuntosAcum2024P());
+        if (equipo.getExtra() != null) {
+            System.out.printf("▐ ♦ %-20s ▐ %-15s ▐ %-15d ▐ %n",
+                    equipo.getExtra().getNameP(), equipo.getNameEqu(), equipo.getExtra().getPuntosAcum2024P());
         }
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
     }
 }
