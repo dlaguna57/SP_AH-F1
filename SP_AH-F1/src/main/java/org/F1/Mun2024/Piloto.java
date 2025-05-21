@@ -42,7 +42,7 @@ public class Piloto {
     public void setCarrerasDispF1(int carrerasDispF1) {this.carrerasDispF1 = carrerasDispF1;}
     public void setPuntosAcum2024P(int puntosAcum2024P) {this.puntosAcum2024P = puntosAcum2024P;}
 
-    
+    // Definicion de Metodo de Impresion Lista de Pilotos
     public void printPiloto(List<Piloto> pilotos) {
         System.out.println("**** Pilotos ****\n");
 
