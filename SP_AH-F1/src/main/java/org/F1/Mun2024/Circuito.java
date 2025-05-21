@@ -55,13 +55,18 @@ public class Circuito {
 
     // Definicion Metodo de Impresion Lista Circuitos
     public void printCircuitos(List<Circuito> circuitos) {
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+        System.out.printf("▐ %-5s ▐ %-20s ▐ %-25s ▐ %-15s %n", "#", "País", "Fecha", "Circuito");
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
         int countCirc = 1;
-        System.out.println("**** Informacion de Circuitos ****");
         for (Circuito circuito : circuitos) {
-            System.out.println("["+countCirc+"] Nombre de Circuito: "+circuito.getNameCirc()+"  Pais: "+circuito.getPaisCirc());
+            System.out.printf("▐ %-5d ▐ %-20s ▐ %-25s ▐ %-15s %n",
+                    countCirc, circuito.getPaisCirc(), circuito.getFecha(), circuito.getNameCirc());
             countCirc++;
         }
+        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
     }
+
 
     // Definicion Metodo de Impresion Resultados Circuito en Tabla
     public void printResultCircuito(Circuito circuito) {
