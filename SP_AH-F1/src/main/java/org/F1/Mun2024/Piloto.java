@@ -45,10 +45,19 @@ public class Piloto {
 
     public void printPiloto(List<Piloto> pilotos) {
         System.out.println("**** Pilotos ****\n");
-        int countPil = 1;
-        for (Piloto piloto : pilotos) {
-            System.out.println("[" + countPil + "] Piloto: "+piloto.getNameP() + " Equipo: "+piloto.getEquipo().getNameEqu());
-            countPil++;
+
+        for (int i = 0; i < pilotos.size(); i += 2) {
+            // Primer piloto en la fila
+            Piloto piloto1 = pilotos.get(i);
+            String pil1 = String.format("[%-2d] %-16s : %-20s", i + 1, piloto1.getNameP(), piloto1.getEquipo().getNameEqu());
+
+            // Segundo piloto en la fila
+            String pil2 = "";
+            for (int j = i + 1; j < i + 2 && j < pilotos.size(); j++) {
+                Piloto piloto2 = pilotos.get(j);
+                pil2 = String.format("[%-2d] %-16s : %-20s", j + 1, piloto2.getNameP(), piloto2.getEquipo().getNameEqu());
+            }
+            System.out.println(pil1 + "   " + pil2); // Se imprimen dos por fila
         }
     }
 
@@ -58,15 +67,10 @@ public class Piloto {
         System.out.printf("▐ %-20s ▐ %-15s ▐ %-5s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %-9s ▐ %n",
                 "Nombre", "Equipo", "Edad", "Nacionalidad", "Campeonatos", "Carreras", "Puntos 2024");
         System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
-
         System.out.printf("▐ ♦ %-20s  ▐ %-15s ▐ %-5d ▐ %-15s ▐ %-10d ▐ %-10d ▐ %-10d▐ %n",
-                    piloto.getNameP(),
-                    piloto.getEquipo().getNameEqu(),
-                    piloto.getEdad(),
-                    piloto.getNacionalidad(),
-                    piloto.getCampGanadosP(),
-                    piloto.getCarrerasDispF1(),
-                    piloto.getPuntosAcum2024P());
+                piloto.getNameP(), piloto.getEquipo().getNameEqu(), piloto.getEdad(),
+                piloto.getNacionalidad(), piloto.getCampGanadosP(), piloto.getCarrerasDispF1(),
+                piloto.getPuntosAcum2024P());
         System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
     }
 }
