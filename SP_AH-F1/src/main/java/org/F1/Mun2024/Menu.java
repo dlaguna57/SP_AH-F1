@@ -1,92 +1,268 @@
 package org.F1.Mun2024;
 
-import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.List;
 
-public class Circuito {
-    private String nameCirc;
-    private String paisCirc;
-    private String fecha;
-    private String longCirc;
-    private List<String> pilotos = new ArrayList<>();
-    private List<String> equipos = new ArrayList<>();
-    private List<String> vueltas = new ArrayList<>();
-    private List<String> posSal = new ArrayList<>();
-    private List<String> posLleg = new ArrayList<>();
-    private List<Integer> puntosAdq = new ArrayList<>();
+public class Menu {
+    int opcion = 0;
+    Scanner sc = new Scanner(System.in);
+    //Llamado de lista de Clase Main
+    private List<Equipo> equipos;
+    private List<Piloto> pilotos;
+    private List<Circuito> circuitos;
 
-    // Definicion de Constructores
-    public Circuito(){   }
-
-    public Circuito(String nameCirc, String paisCirc, String fecha, String longCirc) {
-        this.nameCirc = nameCirc;
-        this.paisCirc = paisCirc;
-        this.fecha = fecha;
-        this.longCirc = longCirc;
+    //Definicion de Constructores
+    public Menu() {
     }
 
-    // Definicion de metodos Get
-    public String getNameCirc() {return nameCirc;}
-    public String getPaisCirc() {return paisCirc;}
-    public String getFecha() {return fecha;}
-    public String getLongCirc() {return longCirc;}
-    public List<String> getPilotos() {return pilotos;}
-    public List<String> getEquipos() {return equipos;}
-    public List<String> getVueltas() {return vueltas;}
-    public List<String> getPosSal() {return posSal;}
-    public List<String> getPosLleg() {return posLleg;}
-    public List<Integer> getPuntosAdq() {return puntosAdq;}
-
-    // Definicion de metodos Set
-    public void setNameCirc(String nameCirc) {this.nameCirc = nameCirc;}
-    public void setPaisCirc(String paisCirc) {this.paisCirc = paisCirc;}
-    public void setFecha(String fecha) {this.fecha = fecha;}
-    public void setLongCirc(String longCirc) {this.longCirc = longCirc;}
-
-    // Definicion Metodo Agregar Lista de Resultados
-    public void Resultados(String piloto, String equipo, String vuelta, String salida, String llegada, int puntos) {
-        pilotos.add(piloto);
-        equipos.add(equipo);
-        vueltas.add(vuelta);
-        posSal.add(salida);
-        posLleg.add(llegada);
-        puntosAdq.add(puntos);
+    public Menu(List<Equipo> equipos, List<Piloto> pilotos, List<Circuito> circuitos) {
+        this.equipos = equipos;
+        this.pilotos = pilotos;
+        this.circuitos = circuitos;
+    }
+    //metodos Get
+    public List<Equipo> getEquipos() { return equipos;}
+    public List<Piloto> getPilotos() {return pilotos;}
+    public List<Circuito> getCircuitos() {return circuitos;}
+    // metodos Set
+    public void setEquipos(List<Equipo> equipos) {this.equipos = equipos;}
+    public void setPilotos(List<Piloto> pilotos) {this.pilotos = pilotos;}
+    public void setCircuitos(List<Circuito> circuitos) {this.circuitos = circuitos;
     }
 
-    // Definicion Metodo de Impresion Lista Circuitos
-    public void printCircuitos(List<Circuito> circuitos) {
-        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
-        System.out.printf("▐ %-5s ▐ %-20s ▐ %-25s ▐ %-15s %n", "#", "País", "Fecha", "Circuito");
-        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
-        int countCirc = 1;
-        for (Circuito circuito : circuitos) {
-            System.out.printf("▐ %-5d ▐ %-20s ▐ %-25s ▐ %-15s %n",
-                    countCirc, circuito.getPaisCirc(), circuito.getFecha(), circuito.getNameCirc());
-            countCirc++;
+    public void menuPrincipal() {
+        while (opcion != 4) {
+            System.out.println(Banner.getBanner4());
+            System.out.println(Banner.getBanner2());
+            System.out.println("\n===== MENÚ PRINCIPAL =====");
+            System.out.println("[1] Mostrar Equipos");
+            System.out.println("[2] Mostrar Pilotos");
+            System.out.println("[3] Mostrar Circuitos");
+            System.out.println("[4] Salir");
+            System.out.print("Seleccione una opción: ");
+
+            int opcion = sc.nextInt();
+            switch (opcion) {
+                case 1:
+                    //Llamada al metodo menuEquipos
+                    menuEquipos();
+                    break;
+
+                case 2:
+                    //Llamada al metodo de impresion de Pilotos
+                    menuPilotos();
+                    break;
+
+                case 3:
+                    menuCircuitos();
+
+                case 4:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
         }
-        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
     }
 
+    public void menuEquipos() {
+        int opcionEq = 0;
+        new Equipo().printEquipos(equipos);
+        while (true) {
+            System.out.println("\n===== MENÚ DE EQUIPOS =====");
+            System.out.println("[1] Seleccionar un Equipo");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
+            System.out.print("Seleccione una opción: ");
 
-    // Definicion Metodo de Impresion Resultados Circuito en Tabla
-    public void printResultCircuito(Circuito circuito) {
-        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
-        System.out.printf("▐ %-35s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %n",
-                "Circuito", "Fecha", "Pais", "Longitud");
-        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
-        System.out.printf("▐ ♦ %-20s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %n",
-                circuito.getNameCirc(), circuito.getFecha(), circuito.getPaisCirc(), circuito.getLongCirc());
-        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
-        System.out.printf("▐ %-20s   ▐ %-15s ▐ %-10s ▐ %-10s ▐ %-10s ▐ %-10s ▐ %n",
-                "Piloto", "Equipo", "Salida", "Llegada", "Puntos", "Vueltas");
-        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+            opcionEq = sc.nextInt();
+            switch (opcionEq) {
+                case 1:
+                    menuSelecEqu();
 
-        for (int i = 0; i < circuito.getPilotos().size(); i++) {
-            System.out.printf("▐ ♦ %-20s ▐ %-15s ▐ %-10s ▐ %-10s ▐ %-10d ▐ %-10s ▐ %n",
-                    circuito.getPilotos().get(i), circuito.getEquipos().get(i),
-                    circuito.getPosSal().get(i), circuito.getPosLleg().get(i),
-                    circuito.getPuntosAdq().get(i), circuito.getVueltas().get(i));
+                case 2:
+                    menuPrincipal();
+                    break;
+
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
         }
-        System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
+    }
+
+    public void menuSelecEqu() {
+        System.out.println("Ingrese el numero del equipo que desea ver:");
+        int equSelect = sc.nextInt() - 1;
+        if (equSelect >= 0 && equSelect < equipos.size()) {
+            equipos.get(equSelect).printInfEquipo(equipos.get(equSelect));
+        } else {
+            System.out.println("Opcion no valida");
+            return;
+        }
+
+
+        while (true) {
+            System.out.println("\n===== MENÚ DE EQUIPO SELECCIONADO =====");
+            System.out.println("[1] Volver al Menu Anterior");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
+            System.out.print("Seleccione una opción: ");
+
+            int opcionEqSelec = sc.nextInt();
+            sc.nextLine();
+            switch (opcionEqSelec) {
+                case 1:
+                    menuEquipos();
+                    break;
+                case 2:
+                    menuPrincipal();
+                    return;
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
+        }
+    }
+
+    public void menuPilotos() {
+        int opcionPi = 0;
+        new Piloto().printPiloto(pilotos);
+        while (true) {
+            System.out.println("\n===== MENÚ DE PILOTOS =====");
+            System.out.println("[1] Seleccionar un Piloto");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
+            System.out.print("Seleccione una opción: ");
+
+            opcionPi = sc.nextInt();
+            switch (opcionPi) {
+                case 1:
+                    menuSelecPil();
+
+                case 2:
+                    menuPrincipal();
+                    break;
+
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
+        }
+    }
+
+    public void menuSelecPil() {
+        System.out.println("Ingrese el numero del Piloto que desea ver:");
+        int pilSelect = sc.nextInt() - 1;
+        if (pilSelect >= 0 && pilSelect < pilotos.size()) {
+            pilotos.get(pilSelect).printInfPilotos(pilotos.get(pilSelect));
+        } else {System.out.println("Opcion no valida"); return;}
+
+        while (true) {
+            System.out.println("\n========== MENÚ DE SELECCION PILOTOS =====");
+            System.out.println("[1] Volver al Menu Anterior");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
+            System.out.print("Seleccione una opción: ");
+
+            int opcionPiSelec = sc.nextInt();
+            sc.nextLine();
+            switch (opcionPiSelec) {
+                case 1:
+                    menuPilotos();
+                    break;
+                case 2:
+                    menuPrincipal();
+                    return;
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
+        }
+    }
+
+    public void  menuCircuitos() {
+        new Circuito().printCircuitos(circuitos);
+        while (true) {
+            System.out.println("\n===== MENÚ DE CIRCUITOS =====");
+            System.out.println("[1] Seleccionar un Circuito");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
+            System.out.print("Seleccione una opción: ");
+
+            int opcionCirc = sc.nextInt();
+            switch (opcionCirc) {
+                case 1:
+                    menuSelecCirc();
+                    break;
+                case 2:
+                    menuPrincipal();
+                    break;
+
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+
+            }
+        }
+    }
+
+    public void menuSelecCirc() {
+        System.out.println("Ingrese el numero del Circuito que desea ver:");
+        int circSelec = sc.nextInt() - 1;
+        if (circSelec >= 0 && circSelec < circuitos.size()) {
+            circuitos.get(circSelec).printResultCircuito(circuitos.get(circSelec));
+        } else {System.out.println("Opcion no valida"); return;}
+
+        while (true) {
+            System.out.println("\n===== MENÚ DE SELECCION CIRCUITOS =====");
+            System.out.println("[1] Volver al Menu Anterior");
+            System.out.println("[2] Volver al Menu Principal");
+            System.out.println("[3] Salir");
+            System.out.print("Seleccione una opción: ");
+
+            int opcionPiSelec = sc.nextInt();
+            sc.nextLine();
+            switch (opcionPiSelec) {
+                case 1:
+                    menuCircuitos();
+                    break;
+                case 2:
+                    menuPrincipal();
+                    return;
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
+        }
     }
 }
