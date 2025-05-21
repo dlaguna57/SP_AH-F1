@@ -64,9 +64,9 @@ public class Main {
         Circuito cr2 = new Circuito(" Circuito Urbano de Jeddah"," Arabia Saudita"," 9 de marzo de 2024","6.174 km");
         Circuito cr3 = new Circuito(" Circuito de Albert Park (Melbourne)"," Australia"," 24 de marzo de 2024","5.278 km");
         Circuito cr4 = new Circuito(" Circuito de Suzuka"," Japon"," 7 de abril de 2024","5.807 km");
-        Circuito cr5 = new Circuito("Circuito Internacional de Shanghái","China","21 de abril de 2024","5.451 km");
-        Circuito cr6 = new Circuito(" Circuito Urbano de Miami (EE.UU.)"," Estados Unidos","5 de mayo de 2024","5.412 km");
-        Circuito cr7 = new Circuito("Autódromo Enzo e Dino Ferrari (Imola)","Emilia-Romagna","19 de mayo de 2024","4.909 km");
+        Circuito cr5 = new Circuito(" Circuito Internacional de Shanghái"," China"," 21 de abril de 2024","5.451 km");
+        Circuito cr6 = new Circuito(" Circuito Urbano de Miami (EE.UU.)"," Estados Unidos"," 5 de mayo de 2024","5.412 km");
+        Circuito cr7 = new Circuito(" Autódromo Enzo e Dino Ferrari (Imola)"," Emilia-Romagna"," 19 de mayo de 2024","4.909 km");
         Circuito cr8 = new Circuito(" Circuito de Mónaco (Montecarlo)"," Monaco"," 26 de mayo de 2024","3.337 km");
         Circuito cr9 = new Circuito(" Circuito Gilles Villeneuve (Montreal)"," Canada"," 9 de junio de 2024","4.361 km");
         Circuito cr10 = new Circuito(" Circuito de Barcelona-Cataluña"," España"," 23 de junio de 2024","4.657 km");
@@ -84,12 +84,13 @@ public class Main {
         Circuito cr22 = new Circuito(" Circuito Urbano de Las Vegas"," Las Vegas"," 17 de noviembre de 2024","6.201 km");
         Circuito cr23 = new Circuito(" Circuito Internacional de Losail"," Qatar"," 1 de diciembre de 2024","5.419 km");
         Circuito cr24 = new Circuito(" Circuito Yas Marina"," Abu Dabi"," 8 de diciembre de 2024","5.281 km");
-        Sprint sp1 = new Sprint("Circuito Internacional de Shanghái","China","20 de abril de 2024","5.451 km");
-        Sprint sp2 = new Sprint(" Circuito Urbano de Miami (EE.UU.)"," Estados Unidos","4 de mayo de 2024","5.412 km");
-        Sprint sp3 = new Sprint(" Red Bull Ring (Spielberg)"," Austria"," 29 de junio de 2024","4.318 km");
-        Sprint sp4 = new Sprint(" Circuito de las Américas (Austin)"," Estados Unidos"," 19 de octubre de 2024","5.513 km");
-        Sprint sp5 = new Sprint(" Autódromo de Interlagos (São Paulo)"," Brasil"," 2 de noviembre de 2024","4.309 km");
-        Sprint sp6 = new Sprint(" Circuito Internacional de Losail"," Qatar"," 30 de noviembre de 2024","5.419 km");
+        Sprint sp1 = new Sprint(" Sprint | Circuito Internacional de Shanghái"," China"," 20 de abril de 2024","5.451 km");
+        Sprint sp2 = new Sprint(" Sprint | Circuito Urbano de Miami (EE.UU.)"," Estados Unidos"," 4 de mayo de 2024","5.412 km");
+        Sprint sp3 = new Sprint(" Sprint | Red Bull Ring (Spielberg)"," Austria"," 29 de junio de 2024","4.318 km");
+        Sprint sp4 = new Sprint(" Sprint | Circuito de las Américas (Austin)"," Estados Unidos"," 19 de octubre de 2024","5.513 km");
+        Sprint sp5 = new Sprint(" Sprint | Autódromo de Interlagos (São Paulo)"," Brasil"," 2 de noviembre de 2024","4.309 km");
+        Sprint sp6 = new Sprint(" Sprint | Circuito Internacional de Losail"," Qatar"," 30 de noviembre de 2024","5.419 km");
+
 
         // Asignar Resultados a Circuito 1
         cr1.Resultados("Max Verstappen","Red Bull Racing","57","1","1",26);cr1.Resultados("Sergio Perez","Red Bull Racing","57","2","2",18);
@@ -475,7 +476,7 @@ public class Main {
         circuitos.add(cr16);circuitos.add(cr17);circuitos.add(cr18);circuitos.add(cr19);circuitos.add(cr20);
         circuitos.add(cr21);circuitos.add(cr22);circuitos.add(cr23);circuitos.add(cr24);circuitos.add(sp1);
         circuitos.add(sp2);circuitos.add(sp3);circuitos.add(sp4);circuitos.add(sp5);circuitos.add(sp6);
-        
+
         Menu menu = new Menu(equipos,pilotos,circuitos);
         menu.menuPrincipal();
     }
