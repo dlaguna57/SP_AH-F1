@@ -60,7 +60,7 @@ public class Equipo {
         }
     }
 
-    // Definicion Metodo de Impresion Informacion Equipo
+    // Definicion Metodo de Impresion Informacion Equipo en Tabla
     public void printInfEquipo(Equipo equipo) {
         System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
         System.out.printf("▐ %-18s ▐ %-20s ▐ %-15s ▐ %-10s ▐ %n",
