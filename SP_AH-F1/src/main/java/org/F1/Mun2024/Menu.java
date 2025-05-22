@@ -33,14 +33,15 @@ public class Menu {
     public void menuPrincipal() {
         while (opcion != 4) {
             System.out.println(Banner.getBanner4());
+            System.out.println(Banner.getBanner5());
             System.out.println(Banner.getBanner2());
-            System.out.println("\n===== MENÚ PRINCIPAL =====");
-            System.out.println("[1] Mostrar Equipos");
-            System.out.println("[2] Mostrar Pilotos");
-            System.out.println("[3] Mostrar Circuitos");
-            System.out.println("[4] Salir");
+            System.out.println("======================================");
+            System.out.println("| [1] Mostrar Equipos               |");
+            System.out.println("| [2] Mostrar Pilotos               |");
+            System.out.println("| [3] Mostrar Circuitos             |");
+            System.out.println("| [4] Salir                         |");
+            System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
-
             int opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
@@ -72,10 +73,12 @@ public class Menu {
         int opcionEq = 0;
         new Equipo().printEquipos(equipos);
         while (true) {
-            System.out.println("\n===== MENÚ DE EQUIPOS =====");
-            System.out.println("[1] Seleccionar un Equipo");
-            System.out.println("[2] Volver al Menu Principal");
-            System.out.println("[3] Salir");
+            System.out.println(Banner.getBanner6());
+            System.out.println("======================================");
+            System.out.println("| [1] Seleccionar un Equipo          |");
+            System.out.println("| [2] Volver al Menu Principal       |");
+            System.out.println("| [3] Salir                          |");
+            System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
 
             opcionEq = sc.nextInt();
@@ -111,10 +114,13 @@ public class Menu {
 
 
         while (true) {
+            System.out.println("======================================");
             System.out.println("\n===== MENÚ DE EQUIPO SELECCIONADO =====");
-            System.out.println("[1] Volver al Menu Anterior");
-            System.out.println("[2] Volver al Menu Principal");
-            System.out.println("[3] Salir");
+            System.out.println("======================================");
+            System.out.println("| [1] Volver al Menu Anterior         |");
+            System.out.println("| [2] Volver al Menu Principal        |");
+            System.out.println("| [3] Salir                          |");
+            System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
 
             int opcionEqSelec = sc.nextInt();
@@ -141,10 +147,12 @@ public class Menu {
         int opcionPi = 0;
         new Piloto().printPiloto(pilotos);
         while (true) {
-            System.out.println("\n===== MENÚ DE PILOTOS =====");
-            System.out.println("[1] Seleccionar un Piloto");
-            System.out.println("[2] Volver al Menu Principal");
-            System.out.println("[3] Salir");
+            System.out.println(Banner.getBanner7());
+            System.out.println("======================================");
+            System.out.println("| [1] Seleccionar un Piloto          |");
+            System.out.println("| [2] Volver al Menu Principal       |");
+            System.out.println("| [3] Salir                          |");
+            System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
 
             opcionPi = sc.nextInt();
@@ -176,10 +184,13 @@ public class Menu {
         } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
+            System.out.println("======================================");
             System.out.println("\n========== MENÚ DE SELECCION PILOTOS =====");
-            System.out.println("[1] Volver al Menu Anterior");
-            System.out.println("[2] Volver al Menu Principal");
-            System.out.println("[3] Salir");
+            System.out.println("======================================");
+            System.out.println("| [1] Volver al Menu Anterior         |");
+            System.out.println("| [2] Volver al Menu Principal        |");
+            System.out.println("| [3] Salir                          |");
+            System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
 
             int opcionPiSelec = sc.nextInt();
@@ -205,10 +216,12 @@ public class Menu {
     public void  menuCircuitos() {
         new Circuito().printCircuitos(circuitos);
         while (true) {
-            System.out.println("\n===== MENÚ DE CIRCUITOS =====");
-            System.out.println("[1] Seleccionar un Circuito");
-            System.out.println("[2] Volver al Menu Principal");
-            System.out.println("[3] Salir");
+            System.out.println(Banner.getBanner8());
+            System.out.println("======================================");
+            System.out.println("| [1] Seleccionar un Circuito        |");
+            System.out.println("| [2] Volver al Menu Principal       |");
+            System.out.println("| [3] Salir                          |");
+            System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
 
             int opcionCirc = sc.nextInt();
@@ -240,10 +253,14 @@ public class Menu {
         } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
+
+            System.out.println("======================================");
             System.out.println("\n===== MENÚ DE SELECCION CIRCUITOS =====");
-            System.out.println("[1] Volver al Menu Anterior");
-            System.out.println("[2] Volver al Menu Principal");
-            System.out.println("[3] Salir");
+            System.out.println("======================================");
+            System.out.println("| [1] Volver al Menu Anterior         |");
+            System.out.println("| [2] Volver al Menu Principal        |");
+            System.out.println("| [3] Salir                          |");
+            System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
 
             int opcionPiSelec = sc.nextInt();
