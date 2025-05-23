@@ -52,11 +52,18 @@ public class Equipo {
 
     // Definicion Metodo de Impresion Lista de Equipos
     public void printEquipos(List<Equipo> equipos){
-        System.out.println("**** EQUIPOS ****\n");
-        int countEqu = 1;
-        for (Equipo equipo : equipos) {
-            System.out.println("["+countEqu+"] "+equipo.getNameEqu());
-            countEqu++;
+        for (int i = 0; i < equipos.size(); i += 2) {
+            // Primer Equipo en la fila
+            Equipo equipo1 = equipos.get(i);
+            String eq1 = String.format("[%-2d] %-16s", i + 1, equipo1.getNameEqu());
+
+            // Segundo Equipo en la fila
+            String eq2 = "";
+            for (int j = i + 1; j < i + 2 && j < equipos.size(); j++) {
+                Equipo equipo2 = equipos.get(j);
+                eq2 = String.format("[%-2d] %-16s", j + 1, equipo2.getNameEqu());
+            }
+            System.out.println(eq1 + "   " + eq2);
         }
     }
 
