@@ -153,15 +153,25 @@ public class Menu {
         int equSelect1 = sc.nextInt() - 1;
         System.out.println("Ingrese el numero del 2do equipo que desea ver:");
         int equSelect2 = sc.nextInt() - 1;
-        if (equSelect1 >= 0 && equSelect1 < equipos.size()) {
+        if (equSelect1 >= 0 && equSelect1 < equipos.size() && equSelect2 >= 0 && equSelect2 < equipos.size()) {
             equipos.get(equSelect1).printInfEquipo(equipos.get(equSelect1));
             System.out.println();
-        } else {
-            System.out.println("Opcion no valida");
-            return;
-        }
-        if (equSelect2 >= 0 && equSelect2 < equipos.size()) {
             equipos.get(equSelect2).printInfEquipo(equipos.get(equSelect2));
+
+            System.out.println("\n"+equipos.get(equSelect1).getNameEqu()+" Pts:"+equipos.get(equSelect1).getPuntosAcumMun2024()+
+                    " VS "+equipos.get(equSelect2).getNameEqu()+" Pts:"+equipos.get(equSelect2).getPuntosAcumMun2024()+"\n");
+
+            if(equipos.get(equSelect1).getPuntosAcumMun2024() > equipos.get(equSelect2).getPuntosAcumMun2024()) {
+                System.out.println("Al Equipo: "+equipos.get(equSelect1).getNameEqu()+" le fue mejor en la temparada.");
+                System.out.println("Revasando por "+(equipos.get(equSelect1).getPuntosAcumMun2024() - equipos.get(equSelect2).getPuntosAcumMun2024())+" puntos");
+                System.out.println("Al Equipo: "+equipos.get(equSelect2).getNameEqu()+"\n");
+            }
+            else {
+                System.out.println("Al Equipo: "+equipos.get(equSelect2).getNameEqu()+" le fue mejor en la temparada.");
+                System.out.println("Revasando por "+(equipos.get(equSelect2).getPuntosAcumMun2024() - equipos.get(equSelect1).getPuntosAcumMun2024())+" puntos");
+                System.out.println("Al Equipo: "+equipos.get(equSelect1).getNameEqu()+"\n");
+            }
+
         } else {
             System.out.println("Opcion no valida");
             return;
@@ -169,7 +179,7 @@ public class Menu {
 
         while (true) {
             System.out.println("======================================");
-            System.out.println("\n===== MENÚ DE COMPARACION DE EQUIPOS =====");
+            System.out.println("===== MENÚ DE COMPARACION DE EQUIPOS =====");
             System.out.println("======================================");
             System.out.println("| [1] Volver al Menu Anterior         |");
             System.out.println("| [2] Volver al Menu Principal        |");
@@ -278,12 +288,25 @@ public class Menu {
         int pilSelect1 = sc.nextInt() - 1;
         System.out.println("Ingrese el numero del 2do Piloto que desea ver:");
         int pilSelect2 = sc.nextInt() - 1;
-        if (pilSelect1 >= 0 && pilSelect1 < pilotos.size()) {
+        if (pilSelect1 >= 0 && pilSelect1 < pilotos.size() && pilSelect2 >= 0 && pilSelect2 < pilotos.size()) {
             pilotos.get(pilSelect1).printInfPilotos(pilotos.get(pilSelect1));
             System.out.println();
-        } else {System.out.println("Opcion no valida"); return;}
-        if (pilSelect2 >= 0 && pilSelect2 < pilotos.size()) {
             pilotos.get(pilSelect2).printInfPilotos(pilotos.get(pilSelect2));
+
+            System.out.println("\n"+pilotos.get(pilSelect1).getNameP()+" Pts:"+pilotos.get(pilSelect1).getPuntosAcum2024P()+
+                    " VS "+pilotos.get(pilSelect2).getNameP()+" Pts:"+pilotos.get(pilSelect2).getPuntosAcum2024P()+"\n");
+
+            if(pilotos.get(pilSelect1).getPuntosAcum2024P() > pilotos.get(pilSelect2).getPuntosAcum2024P()) {
+                System.out.println("Al Piloto: "+pilotos.get(pilSelect1).getNameP()+" le fue mejor en la temparada.");
+                System.out.println("Revasando por "+(pilotos.get(pilSelect1).getPuntosAcum2024P() - pilotos.get(pilSelect2).getPuntosAcum2024P())+" puntos");
+                System.out.println("Al Piloto: "+pilotos.get(pilSelect2).getNameP()+"\n");
+            }
+            else {
+                System.out.println("Al Piloto: "+pilotos.get(pilSelect2).getNameP()+" le fue mejor en la temparada.");
+                System.out.println("Revasando por "+(pilotos.get(pilSelect2).getPuntosAcum2024P() - pilotos.get(pilSelect1).getPuntosAcum2024P())+" puntos");
+                System.out.println("Al Piloto: "+pilotos.get(pilSelect1).getNameP()+"\n");
+            }
+
         } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
