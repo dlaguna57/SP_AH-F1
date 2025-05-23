@@ -76,8 +76,9 @@ public class Menu {
             System.out.println(Banner.getBanner6());
             System.out.println("======================================");
             System.out.println("| [1] Seleccionar un Equipo          |");
-            System.out.println("| [2] Volver al Menu Principal       |");
-            System.out.println("| [3] Salir                          |");
+            System.out.println("| [2] Comparar equipos               |");
+            System.out.println("| [3] Volver al Menu Principal       |");
+            System.out.println("| [4] Salir                          |");
             System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
 
@@ -87,10 +88,14 @@ public class Menu {
                     menuSelecEqu();
 
                 case 2:
-                    menuPrincipal();
+                    menuCompEqu();
                     break;
 
                 case 3:
+                    menuPrincipal();
+                    break;
+
+                case 4:
                     System.out.println("Saliendo del sistema");
                     System.exit(0);
                     break;
@@ -143,6 +148,56 @@ public class Menu {
         }
     }
 
+    public void menuCompEqu() {
+        System.out.println("Ingrese el numero del 1er equipo que desea ver:");
+        int equSelect1 = sc.nextInt() - 1;
+        System.out.println("Ingrese el numero del 2do equipo que desea ver:");
+        int equSelect2 = sc.nextInt() - 1;
+        if (equSelect1 >= 0 && equSelect1 < equipos.size()) {
+            equipos.get(equSelect1).printInfEquipo(equipos.get(equSelect1));
+            System.out.println();
+        } else {
+            System.out.println("Opcion no valida");
+            return;
+        }
+        if (equSelect2 >= 0 && equSelect2 < equipos.size()) {
+            equipos.get(equSelect2).printInfEquipo(equipos.get(equSelect2));
+        } else {
+            System.out.println("Opcion no valida");
+            return;
+        }
+
+        while (true) {
+            System.out.println("======================================");
+            System.out.println("\n===== MENÚ DE COMPARACION DE EQUIPOS =====");
+            System.out.println("======================================");
+            System.out.println("| [1] Volver al Menu Anterior         |");
+            System.out.println("| [2] Volver al Menu Principal        |");
+            System.out.println("| [3] Salir                          |");
+            System.out.println("======================================");
+            System.out.print("Seleccione una opción: ");
+
+            int opcionEqSelec = sc.nextInt();
+            sc.nextLine();
+            switch (opcionEqSelec) {
+                case 1:
+                    menuEquipos();
+                    break;
+                case 2:
+                    menuPrincipal();
+                    return;
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
+        }
+    }
+
+
     public void menuPilotos() {
         int opcionPi = 0;
         new Piloto().printPiloto(pilotos);
@@ -150,8 +205,9 @@ public class Menu {
             System.out.println(Banner.getBanner7());
             System.out.println("======================================");
             System.out.println("| [1] Seleccionar un Piloto          |");
-            System.out.println("| [2] Volver al Menu Principal       |");
-            System.out.println("| [3] Salir                          |");
+            System.out.println("| [2] Comparacion Pilotos            |");
+            System.out.println("| [3] Volver al Menu Principal       |");
+            System.out.println("| [4] Salir                          |");
             System.out.println("======================================");
             System.out.print("Seleccione una opción: ");
 
@@ -161,10 +217,14 @@ public class Menu {
                     menuSelecPil();
 
                 case 2:
-                    menuPrincipal();
+                    menuCompPil();
                     break;
 
                 case 3:
+                    menuPrincipal();
+                    break;
+
+                case 4:
                     System.out.println("Saliendo del sistema");
                     System.exit(0);
                     break;
@@ -213,8 +273,52 @@ public class Menu {
         }
     }
 
+    public void menuCompPil() {
+        System.out.println("Ingrese el numero del 1er Piloto que desea ver:");
+        int pilSelect1 = sc.nextInt() - 1;
+        System.out.println("Ingrese el numero del 2do Piloto que desea ver:");
+        int pilSelect2 = sc.nextInt() - 1;
+        if (pilSelect1 >= 0 && pilSelect1 < pilotos.size()) {
+            pilotos.get(pilSelect1).printInfPilotos(pilotos.get(pilSelect1));
+            System.out.println();
+        } else {System.out.println("Opcion no valida"); return;}
+        if (pilSelect2 >= 0 && pilSelect2 < pilotos.size()) {
+            pilotos.get(pilSelect2).printInfPilotos(pilotos.get(pilSelect2));
+        } else {System.out.println("Opcion no valida"); return;}
+
+        while (true) {
+            System.out.println("======================================");
+            System.out.println("\n========== MENÚ DE SELECCION PILOTOS =====");
+            System.out.println("======================================");
+            System.out.println("| [1] Volver al Menu Anterior         |");
+            System.out.println("| [2] Volver al Menu Principal        |");
+            System.out.println("| [3] Salir                          |");
+            System.out.println("======================================");
+            System.out.print("Seleccione una opción: ");
+
+            int opcionPiSelec = sc.nextInt();
+            sc.nextLine();
+            switch (opcionPiSelec) {
+                case 1:
+                    menuPilotos();
+                    break;
+                case 2:
+                    menuPrincipal();
+                    return;
+                case 3:
+                    System.out.println("Saliendo del sistema");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opcion no valida, ingrese de nuevo la opcion");
+                    break;
+            }
+        }
+    }
+
     public void  menuCircuitos() {
         new Circuito().printCircuitos(circuitos);
+        System.out.println();
         while (true) {
             System.out.println(Banner.getBanner8());
             System.out.println("======================================");
@@ -250,6 +354,7 @@ public class Menu {
         int circSelec = sc.nextInt() - 1;
         if (circSelec >= 0 && circSelec < circuitos.size()) {
             circuitos.get(circSelec).printResultCircuito(circuitos.get(circSelec));
+            System.out.println();
         } else {System.out.println("Opcion no valida"); return;}
 
         while (true) {
