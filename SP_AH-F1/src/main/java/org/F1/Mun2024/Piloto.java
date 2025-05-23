@@ -45,7 +45,6 @@ public class Piloto {
     // Definicion de Metodo de Impresion Lista de Pilotos
     public void printPiloto(List<Piloto> pilotos) {
         System.out.println("**** Pilotos ****\n");
-
         for (int i = 0; i < pilotos.size(); i += 2) {
             // Primer piloto en la fila
             Piloto piloto1 = pilotos.get(i);
@@ -57,8 +56,9 @@ public class Piloto {
                 Piloto piloto2 = pilotos.get(j);
                 pil2 = String.format("[%-2d] %-16s : %-20s", j + 1, piloto2.getNameP(), piloto2.getEquipo().getNameEqu());
             }
-            System.out.println(pil1 + "   " + pil2); // Se imprimen dos por fila
+            System.out.println(pil1 + "   " + pil2);
         }
+        System.out.println();
     }
 
     // Definicion de Metodo de Impresion en Tabla
