@@ -45,12 +45,8 @@ public class Circuito {
 
     // Definicion Metodo Agregar Lista de Resultados
     public void Resultados(String piloto, String equipo, String vuelta, String salida, String llegada, int puntos) {
-        pilotos.add(piloto);
-        equipos.add(equipo);
-        vueltas.add(vuelta);
-        posSal.add(salida);
-        posLleg.add(llegada);
-        puntosAdq.add(puntos);
+        pilotos.add(piloto); equipos.add(equipo); vueltas.add(vuelta);
+        posSal.add(salida); posLleg.add(llegada); puntosAdq.add(puntos);
     }
 
     // Definicion Metodo de Impresion Lista Circuitos
@@ -66,7 +62,6 @@ public class Circuito {
         }
         System.out.println("֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍֍");
     }
-
 
     // Definicion Metodo de Impresion Resultados Circuito en Tabla
     public void printResultCircuito(Circuito circuito) {
